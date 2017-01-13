@@ -11,21 +11,31 @@ public class PlayerController : MonoBehaviour
     #region CHR variables
     //Character
     [SerializeField]
+    [Range(0,10)]
     private float m_fMoveSpeed = 10f;
     [SerializeField]
-    private float m_fAdditionalGravity = 10f;
+    [Range(100, 200)]
+    private float m_fAdditionalGravity = 100f;
     private float m_fInitialMoveSpeed;
     public bool m_bIsInCollision = true;
     enum StateMachine { StartJump, Jump, EndJump, Airborn, StartRun, Run, EndRun };
     StateMachine m_eStateMachine;
     public GameObject m_pMyController;
+    GameObject m_pEnergyBar;
+    GameObject m_pLeftEnergyBar;
+    GameObject m_pRightEnergyBar;
+    [SerializeField]
+    [Range(0, 5)]
+    private float m_fEnergy = 2f;
+    float m_fActualEnergy;
+    bool m_bIsDashing = false;
     #endregion
 
     #region Debug variables
     //Camera
-    [SerializeField]
+    
     private float m_fSpeedH = 2.0f;
-    [SerializeField]
+    
     private float m_fSpeedV = 2.0f;
 
     public GameObject Projectile;
@@ -57,6 +67,10 @@ public class PlayerController : MonoBehaviour
         m_eStateMachine = StateMachine.Run;
         Cursor.visible = false;
         m_fInitialMoveSpeed = m_fMoveSpeed;
+        m_pEnergyBar = GameObject.Find("EnergyBar");
+        m_pLeftEnergyBar = GameObject.Find("LeftEnergyBar");
+        m_pRightEnergyBar = GameObject.Find("RightEnergyBar");
+        m_fActualEnergy = m_fEnergy;
 
         switch(m_ePlayMode)
         {
@@ -97,6 +111,8 @@ public class PlayerController : MonoBehaviour
                 break;
 
         }
+
+        EnergyBarBehavior();
     }
 
     void StateMachineControl()
@@ -149,22 +165,28 @@ public class PlayerController : MonoBehaviour
     // (Debug/VR) Used to move around
     void Dash()
     {
-        switch (m_eMoveMode)
+        if (m_fActualEnergy >= 0)
         {
-            case MoveMode.Jump_Godzilla:
-                m_pMyController.GetComponent<Rigidbody>().AddForce(transform.up * m_fMoveSpeed * 2 * 30, ForceMode.VelocityChange);
-                m_pMyController.GetComponent<Rigidbody>().AddForce(transform.forward * m_fMoveSpeed * 30, ForceMode.VelocityChange);
-                break;
-            case MoveMode.Dash_Vision:
-                m_pMyController.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
-                break;
-            case MoveMode.Dash_Thor:
-                m_pMyController.GetComponent<Rigidbody>().AddForce(transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
-                break;
-            case MoveMode.Dash_IronMan:
-                m_pMyController.GetComponent<Rigidbody>().AddForce(-transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
-                break;
-        }  
+            switch (m_eMoveMode)
+            {
+                case MoveMode.Jump_Godzilla:
+                    m_pMyController.GetComponent<Rigidbody>().AddForce(transform.up * m_fMoveSpeed * 2 * 30, ForceMode.VelocityChange);
+                    m_pMyController.GetComponent<Rigidbody>().AddForce(transform.forward * m_fMoveSpeed * 30, ForceMode.VelocityChange);
+                    break;
+                case MoveMode.Dash_Vision:
+                    m_pMyController.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
+                    break;
+                case MoveMode.Dash_Thor:
+                    m_pMyController.GetComponent<Rigidbody>().AddForce(transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
+                    break;
+                case MoveMode.Dash_IronMan:
+                    m_pMyController.GetComponent<Rigidbody>().AddForce(-transform.forward * m_fMoveSpeed, ForceMode.VelocityChange);
+                    break;
+            }
+
+            m_fActualEnergy -= Time.deltaTime;
+        }
+          
     }
 
     void VRControllerInput()
@@ -175,10 +197,17 @@ public class PlayerController : MonoBehaviour
         }
 
 		if (device.GetPressDown(dPadUp))
+        {
 			m_eStateMachine = StateMachine.StartJump;
+            m_bIsInCollision = false;
+            m_bIsDashing = true;
+        }
 
 		if(device.GetPressUp(dPadUp))
+        {
 			m_eStateMachine = StateMachine.EndJump;
+            m_bIsDashing = false;
+        }
     }
 
 	void KeyboardInput()
@@ -187,12 +216,37 @@ public class PlayerController : MonoBehaviour
         {
             m_eStateMachine = StateMachine.StartJump;
             m_bIsInCollision = false;
+            m_bIsDashing = true;
         }
 						
 		
 		if(Input.GetKeyUp(KeyCode.Space))
+        {
             m_eStateMachine = StateMachine.EndJump;			
+            m_bIsDashing = false;
+        }
 	}
+
+    void EnergyBarBehavior()
+    {
+        if (m_fActualEnergy <= m_fEnergy && !m_bIsDashing)
+            m_fActualEnergy += Time.deltaTime;
+
+        float fEnergyScaling = m_fActualEnergy / (m_fEnergy * 10);
+
+        switch(m_ePlayMode)
+        {
+            case PlayMode.Debug:
+                m_pEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pEnergyBar.transform.localScale.y, m_pEnergyBar.transform.localScale.z);
+                break;
+            case PlayMode.VR:
+                m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
+                m_pRightEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pRightEnergyBar.transform.localScale.y, m_pRightEnergyBar.transform.localScale.z);
+                break;
+        }
+        
+        //Debug.Log(m_pEnergyBar.transform.localScale);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {  
