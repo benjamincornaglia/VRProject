@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody))]
 public class IAHelico : MonoBehaviour {
 
 	public GameObject Target;
@@ -12,11 +11,15 @@ public class IAHelico : MonoBehaviour {
 	private float nextFire;
 	private Rigidbody rb;
 
+	float lastDistance = 0;
+
+	private bool alive = true;
+
 	// Use this for initialization
 	void Start () {
-		transform.position = new Vector3 (transform.position.x, Target.transform.position.y + 100f, transform.position.z);
+		transform.position = new Vector3 (transform.position.x, Target.transform.position.y + 200f, transform.position.z);
 		nextFire = FireInterval;
-		rb = GetComponent<Rigidbody> ();
+		rb = transform.parent.GetComponent<Rigidbody> ();
 	}
 
 	private void shoot(Vector3 targetDirection) {
@@ -32,7 +35,11 @@ public class IAHelico : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+		if (!alive) {
+			return;
+		}
+
 		var targetDirection = (Target.transform.position - transform.position).normalized;
 
 		shoot (targetDirection);
@@ -43,10 +50,29 @@ public class IAHelico : MonoBehaviour {
 		var rotation = Quaternion.LookRotation (targetDirection);
 		transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime);
 
-		rb.AddForce(targetDirection * Speed);
+		float distance = Vector3.Distance (transform.position, 2.0f * Target.transform.position);
 
-		if (transform.position.y < Target.transform.position.y + 100.0f) {
-			rb.AddForce(-Physics.gravity * 20.0f * Time.deltaTime);
+		if (distance > 200.0f) {
+
+			if (distance < lastDistance) {
+				rb.AddForce (Vector3.ClampMagnitude (targetDirection * Speed, 1.0f));
+			} else {
+				rb.AddForce (targetDirection * Speed);
+			}
 		}
+
+		lastDistance = distance;
+
+		if (transform.position.y < Target.transform.position.y + 150.0f) {
+			rb.AddForce(-Physics.gravity * 5.5f * Time.deltaTime);
+		}
+
+		if (rb.velocity.y < -10) {
+			rb.AddForce (-Physics.gravity * 5.0f * Time.deltaTime);
+		}
+	}
+
+	void OnCollisionEnter(Collision collision) {
+		alive = false;
 	}
 }
