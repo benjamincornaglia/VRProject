@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     GameObject m_pRightEnergyBar;
     [SerializeField]
     [Range(0, 5)]
-    private float m_fEnergy = 2f;
+    private float m_fEnergy = 0.5f;
     float m_fActualEnergy;
     bool m_bIsDashing = false;
     #endregion
@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour
 
     void EnergyBarBehavior()
     {
-        if (m_fActualEnergy <= m_fEnergy && !m_bIsDashing)
+        if (m_fActualEnergy <= m_fEnergy && !m_bIsDashing && m_bIsInCollision)
             m_fActualEnergy += Time.deltaTime;
 
         float fEnergyScaling = m_fActualEnergy / (m_fEnergy * 10);
