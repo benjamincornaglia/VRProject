@@ -8,6 +8,8 @@ public class IAHelico : MonoBehaviour {
 	public float FireInterval = 5;
 	public GameObject Projectile;
 
+	public GameObject Helices;
+
 	private float nextFire;
 	private Rigidbody rb;
 
@@ -19,7 +21,7 @@ public class IAHelico : MonoBehaviour {
 	void Start () {
 		transform.position = new Vector3 (transform.position.x, Target.transform.position.y + 200f, transform.position.z);
 		nextFire = FireInterval;
-		rb = transform.parent.GetComponent<Rigidbody> ();
+		rb = GetComponent<Rigidbody> ();
 	}
 
 	private void shoot(Vector3 targetDirection) {
@@ -32,6 +34,11 @@ public class IAHelico : MonoBehaviour {
 			}
 			nextFire = FireInterval;
 		}
+	}
+
+	void Update() {
+
+		Helices.transform.Rotate(0, 20, 0);
 	}
 
 	// Update is called once per frame
@@ -47,8 +54,10 @@ public class IAHelico : MonoBehaviour {
 		targetDirection.y = 0;
 		targetDirection.Normalize ();
 
-		var rotation = Quaternion.LookRotation (targetDirection);
-		transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime);
+		if (targetDirection != Vector3.zero) {
+			var rotation = Quaternion.LookRotation (targetDirection);
+			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime);
+		}
 
 		float distance = Vector3.Distance (transform.position, 2.0f * Target.transform.position);
 
