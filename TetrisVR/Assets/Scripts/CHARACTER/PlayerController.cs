@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     #region CHR variables
     //Character
     [SerializeField]
-    [Range(0,10)]
+    [Range(0,100)]
     private float m_fMoveSpeed = 10f;
     [SerializeField]
     [Range(100, 200)]
@@ -122,11 +122,11 @@ public class PlayerController : MonoBehaviour
             case StateMachine.StartJump:
                 if (m_eMoveMode == MoveMode.Jump_Godzilla && m_bIsInCollision)
                     Dash();
-                m_eStateMachine = StateMachine.Jump;
+				else
+                	m_eStateMachine = StateMachine.Jump;
                 break;
             case StateMachine.Jump:
-                if (m_eMoveMode != MoveMode.Jump_Godzilla)
-                    Dash();
+                Dash();
                 break;
             case StateMachine.EndJump:
                 
@@ -165,6 +165,7 @@ public class PlayerController : MonoBehaviour
     // (Debug/VR) Used to move around
     void Dash()
     {
+		Debug.Log ("Dashing");
         if (m_fActualEnergy >= 0)
         {
             switch (m_eMoveMode)
@@ -199,6 +200,7 @@ public class PlayerController : MonoBehaviour
 		if (device.GetPressDown(dPadUp))
         {
 			m_eStateMachine = StateMachine.StartJump;
+			//Debug.Log ("dPad Up pressed");
             m_bIsInCollision = false;
             m_bIsDashing = true;
         }
@@ -229,7 +231,7 @@ public class PlayerController : MonoBehaviour
 
     void EnergyBarBehavior()
     {
-        if (m_fActualEnergy <= m_fEnergy && !m_bIsDashing && m_bIsInCollision)
+        if (m_fActualEnergy <= m_fEnergy && !m_bIsDashing)
             m_fActualEnergy += Time.deltaTime;
 
         float fEnergyScaling = m_fActualEnergy / (m_fEnergy * 10);
