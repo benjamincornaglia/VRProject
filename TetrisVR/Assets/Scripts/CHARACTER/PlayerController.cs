@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
     enum PlayMode { VR, Debug };
     [SerializeField]
     PlayMode m_ePlayMode;
-#endregion
+    #endregion
+
+    AudioSource m_pAirbornCue;
+    AudioSource m_pLandingCue;
 
     // Use this for initialization
     void Start()
@@ -70,6 +73,8 @@ public class PlayerController : MonoBehaviour
         m_pEnergyBar = GameObject.Find("EnergyBar");
         m_pLeftEnergyBar = GameObject.Find("LeftEnergyBar");
         m_pRightEnergyBar = GameObject.Find("RightEnergyBar");
+        m_pAirbornCue = GameObject.Find("AirbornSource").GetComponent<AudioSource>();
+        m_pLandingCue = GameObject.Find("LandingSource").GetComponent<AudioSource>();
         m_fActualEnergy = m_fEnergy;
 
         switch(m_ePlayMode)
@@ -81,6 +86,8 @@ public class PlayerController : MonoBehaviour
                 m_pMyController = m_pVRController;
                 break;
         }
+
+        Camera.main.GetComponent<AudioSource>().DOFade(0.3f, 2f);
     }
 
     // Update is called once per frame
@@ -112,7 +119,8 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        EnergyBarBehavior();
+        EnergyBarBehavior(); 
+
     }
 
     void StateMachineControl()
@@ -129,7 +137,9 @@ public class PlayerController : MonoBehaviour
                 Dash();
                 break;
             case StateMachine.EndJump:
-                
+                m_pAirbornCue.DOFade(0f, 0.2f);
+                m_pMyController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                m_eStateMachine = StateMachine.Run;
                 break;
             case StateMachine.Airborn:
                 
@@ -138,7 +148,7 @@ public class PlayerController : MonoBehaviour
                 
                 break;
             case StateMachine.Run:
-                
+                m_pAirbornCue.Stop();
                 break;
         }
     }
@@ -186,6 +196,7 @@ public class PlayerController : MonoBehaviour
             }
 
             m_fActualEnergy -= Time.deltaTime;
+            
         }
           
     }
@@ -219,13 +230,22 @@ public class PlayerController : MonoBehaviour
             m_eStateMachine = StateMachine.StartJump;
             m_bIsInCollision = false;
             m_bIsDashing = true;
+            GetComponent<AudioSource>().DOFade(0.7f, 1f);
+            GetComponent<AudioSource>().pitch = Random.Range(0.5f, 1f);
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                //GetComponent<AudioSource>().DOFade(1, 1f);
+                GetComponent<AudioSource>().Play();
+            }
         }
-						
-		
-		if(Input.GetKeyUp(KeyCode.Space))
+                
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            m_eStateMachine = StateMachine.EndJump;			
+            		
             m_bIsDashing = false;
+            GetComponent<AudioSource>().DOFade(0, 1f);
+            //GetComponent<AudioSource>().Stop();
+            
         }
 	}
 
@@ -251,9 +271,38 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {  
-        m_bIsInCollision = true;
-        m_pMyController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+    {  if(collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PicaVoxelVolume")
+        {
+            m_bIsInCollision = true;
+            
+            m_eStateMachine = StateMachine.EndJump;
+            m_pLandingCue.pitch = Random.Range(0.5f, 1f);
+            if(!m_pLandingCue.isPlaying)
+            {
+                m_pLandingCue.Play();
+                Debug.Log("LandingCue");
+            }
+            if (m_pAirbornCue.isPlaying)
+                m_pAirbornCue.Stop();
+                
+        }
+        
+        
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PicaVoxelVolume")
+        {
+            m_bIsInCollision = false;
+            if (m_pLandingCue.isPlaying)
+                m_pLandingCue.Stop();
+
+            if (m_pAirbornCue.volume < 1f)
+                m_pAirbornCue.DOFade(1f, 2f);
+            if (m_pAirbornCue.isPlaying == false)
+                m_pAirbornCue.Play();
+        }
     }
 
 }

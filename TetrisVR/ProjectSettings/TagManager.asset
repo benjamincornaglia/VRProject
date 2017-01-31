@@ -7,7 +7,7 @@ TagManager:
   - PicaVoxelVolume
   - Anchor
   - Piece
-  - TravelTarget
+  - Destructor
   layers:
   - Default
   - TransparentFX

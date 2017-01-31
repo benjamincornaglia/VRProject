@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using PicaVoxel;
 
+[RequireComponent(typeof(AudioSource))]
 public class Destruction : MonoBehaviour {
 
     public Exploder m_pExploder;
 
     public float m_fMaxExplosionRadius = 20f;
     public float m_fDestructionThreshold = 100f;
+    public AudioClip m_pClip;
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +31,18 @@ public class Destruction : MonoBehaviour {
                 float fExplosionRadius = collision.relativeVelocity.magnitude / 100;
                 m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
+                GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                //Debug.Log(GetComponent<AudioSource>().pitch);
+                if (!GetComponent<AudioSource>().isPlaying)
+                {
+                    GetComponent<AudioSource>().Play();
+                    
+                    
+                }
+                
             }
-            Debug.Log("Impact force = " + collision.relativeVelocity.magnitude);
-            Debug.Log("ExplosionRadius = " + m_pExploder.ExplosionRadius);
+            //Debug.Log("Impact force = " + collision.relativeVelocity.magnitude);
+            //Debug.Log("ExplosionRadius = " + m_pExploder.ExplosionRadius);
             
         }
         
