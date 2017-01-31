@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
     AudioSource m_pAirbornCue;
     AudioSource m_pLandingCue;
+	public GameObject m_pMusicSource;
 
     // Use this for initialization
     void Start()
@@ -87,7 +88,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        Camera.main.GetComponent<AudioSource>().DOFade(0.3f, 2f);
+        m_pMusicSource.GetComponent<AudioSource>().DOFade(0.3f, 2f);
     }
 
     // Update is called once per frame
@@ -137,7 +138,7 @@ public class PlayerController : MonoBehaviour
                 Dash();
                 break;
             case StateMachine.EndJump:
-                m_pAirbornCue.DOFade(0f, 0.2f);
+                //m_pAirbornCue.DOFade(0f, 0.2f);
                 m_pMyController.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 m_eStateMachine = StateMachine.Run;
                 break;
@@ -148,7 +149,7 @@ public class PlayerController : MonoBehaviour
                 
                 break;
             case StateMachine.Run:
-                m_pAirbornCue.Stop();
+                //m_pAirbornCue.Stop();
                 break;
         }
     }
@@ -214,12 +215,16 @@ public class PlayerController : MonoBehaviour
 			//Debug.Log ("dPad Up pressed");
             m_bIsInCollision = false;
             m_bIsDashing = true;
+			m_pVRController.GetComponent<AudioSource>().DOFade(0.7f, 1f);
+			m_pVRController.GetComponent<AudioSource>().pitch = Random.Range(0.5f, 1f);
+			m_pVRController.GetComponent<AudioSource> ().Play ();
         }
 
 		if(device.GetPressUp(dPadUp))
         {
 			m_eStateMachine = StateMachine.EndJump;
             m_bIsDashing = false;
+			m_pVRController.GetComponent<AudioSource>().DOFade(0, 1f);
         }
     }
 
@@ -276,14 +281,14 @@ public class PlayerController : MonoBehaviour
             m_bIsInCollision = true;
             
             m_eStateMachine = StateMachine.EndJump;
-            m_pLandingCue.pitch = Random.Range(0.5f, 1f);
-            if(!m_pLandingCue.isPlaying)
-            {
-                m_pLandingCue.Play();
-                Debug.Log("LandingCue");
-            }
-            if (m_pAirbornCue.isPlaying)
-                m_pAirbornCue.Stop();
+           // m_pLandingCue.pitch = Random.Range(0.5f, 1f);
+           // if(!m_pLandingCue.isPlaying)
+           // {
+           //     m_pLandingCue.Play();
+            //    Debug.Log("LandingCue");
+           // }
+            //if (m_pAirbornCue.isPlaying)
+               // m_pAirbornCue.Stop();
                 
         }
         
@@ -295,13 +300,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PicaVoxelVolume")
         {
             m_bIsInCollision = false;
-            if (m_pLandingCue.isPlaying)
+           /* if (m_pLandingCue.isPlaying)
                 m_pLandingCue.Stop();
 
             if (m_pAirbornCue.volume < 1f)
                 m_pAirbornCue.DOFade(1f, 2f);
             if (m_pAirbornCue.isPlaying == false)
-                m_pAirbornCue.Play();
+                m_pAirbornCue.Play();*/
         }
     }
 

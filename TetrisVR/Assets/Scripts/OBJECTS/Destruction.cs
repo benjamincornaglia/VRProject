@@ -24,11 +24,11 @@ public class Destruction : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(this.gameObject.tag == "Destructor" && collision.gameObject.tag == "PicaVoxelVolume")
+		if((this.gameObject.tag == "Destructor" || this.gameObject.tag == "Piece") && collision.gameObject.tag == "PicaVoxelVolume")
         {
-            if(collision.relativeVelocity.magnitude > m_fDestructionThreshold)
+            if(collision.relativeVelocity.magnitude * 1000 > m_fDestructionThreshold)
             {
-                float fExplosionRadius = collision.relativeVelocity.magnitude / 100;
+                float fExplosionRadius = collision.relativeVelocity.magnitude * 1000;
                 m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
                 GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
@@ -36,10 +36,11 @@ public class Destruction : MonoBehaviour {
                 if (!GetComponent<AudioSource>().isPlaying)
                 {
                     GetComponent<AudioSource>().Play();
-                    
+					//Debug.Log ("Explosion Cue");
                     
                 }
-                
+				Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude*1000);
+				Debug.Log ("Explosion Radius = " + fExplosionRadius);
             }
             //Debug.Log("Impact force = " + collision.relativeVelocity.magnitude);
             //Debug.Log("ExplosionRadius = " + m_pExploder.ExplosionRadius);
