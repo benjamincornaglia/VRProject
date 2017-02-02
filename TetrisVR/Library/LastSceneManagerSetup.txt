@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Tetris_Playground 1.unity
-  isLoaded: 1
-  isActive: 1
