@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         switch(m_ePlayMode)
         {
             case PlayMode.Debug:
-                m_pMyController = this.gameObject;
+                m_pMyController = GameObject.Find("CharacterController");
                 break;
             case PlayMode.VR:
                 m_pMyController = GameObject.Find("VRController");
