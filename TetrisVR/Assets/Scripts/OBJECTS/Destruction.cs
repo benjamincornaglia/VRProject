@@ -24,29 +24,70 @@ public class Destruction : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-		if((this.gameObject.tag == "Destructor" || this.gameObject.tag == "Piece") && collision.gameObject.tag == "PicaVoxelVolume")
+		if(this.gameObject.tag == "Destructor" && collision.gameObject.tag == "PicaVoxelVolume")
         {
-            if(collision.relativeVelocity.magnitude * 1000 > m_fDestructionThreshold)
+            if(collision.relativeVelocity.magnitude * 1000f > m_fDestructionThreshold)
             {
-                float fExplosionRadius = collision.relativeVelocity.magnitude * 1000;
+                float fExplosionRadius = collision.relativeVelocity.magnitude * 1000f;
                 m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
-                GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
-                //Debug.Log(GetComponent<AudioSource>().pitch);
-                if (!GetComponent<AudioSource>().isPlaying)
+                if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().Play();
-					//Debug.Log ("Explosion Cue");
-                    
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    if (!GetComponent<AudioSource>().isPlaying)
+                    {
+                        GetComponent<AudioSource>().Play();
+                        //Debug.Log ("Explosion Cue");
+
+                    }
                 }
-				Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude*1000);
-				Debug.Log ("Explosion Radius = " + fExplosionRadius);
-            }
-            //Debug.Log("Impact force = " + collision.relativeVelocity.magnitude);
-            //Debug.Log("ExplosionRadius = " + m_pExploder.ExplosionRadius);
-            
+                Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
+				Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+            } 
         }
-        
-        
+        else if(this.gameObject.tag == "Piece" && collision.gameObject.tag == "PicaVoxelVolume")
+        {
+            if (collision.relativeVelocity.magnitude > m_fDestructionThreshold)
+            {
+                float fExplosionRadius = collision.relativeVelocity.magnitude;
+                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
+                m_pExploder.Explode();
+                if (GetComponent<AudioSource>() != null)
+                {
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    if (!GetComponent<AudioSource>().isPlaying)
+                    {
+                        GetComponent<AudioSource>().Play();
+                        //Debug.Log ("Explosion Cue");
+
+                    }
+                }
+                Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
+                Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+            }
+        }
+        else if(this.gameObject.tag == "PicaVoxelVolume" && collision.gameObject.tag == "PicaVoxelVolume")
+        {
+            if (collision.relativeVelocity.magnitude > m_fDestructionThreshold)
+            {
+                float fExplosionRadius = collision.relativeVelocity.magnitude;
+                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
+                m_pExploder.Explode();
+                if (GetComponent<AudioSource>() != null)
+                {
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    if (!GetComponent<AudioSource>().isPlaying)
+                    {
+                        GetComponent<AudioSource>().Play();
+                        //Debug.Log ("Explosion Cue");
+
+                    }
+                }
+                //Debug.Log(GetComponent<AudioSource>().pitch);
+                
+                Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
+                Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+            }
+        } 
     }
 }
