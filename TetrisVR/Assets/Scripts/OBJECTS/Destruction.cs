@@ -12,6 +12,12 @@ public class Destruction : MonoBehaviour {
     public float m_fDestructionThreshold = 100f;
     public AudioClip m_pClip;
 
+    public GameObject m_pRubble;
+
+    bool m_bHasSpawnedRubble = false;
+    float m_fSpawnRubbleTimer = 0f;
+    public float m_fSpawnTimer = 10f;
+
 	// Use this for initialization
 	void Start () {
         m_pExploder = this.GetComponent<Exploder>();
@@ -19,8 +25,37 @@ public class Destruction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        ManageSpawnTimer();
+
 	}
+
+    void ManageSpawnTimer()
+    {
+        if (m_bHasSpawnedRubble)
+        {
+            m_fSpawnRubbleTimer += Time.deltaTime;
+        }
+
+        if (m_fSpawnRubbleTimer >= m_fSpawnTimer)
+        {
+            m_fSpawnRubbleTimer = 0;
+            m_bHasSpawnedRubble = false;
+        }
+    }
+
+    void RandomRubbleSpawn(Vector3 _vPos)
+    {
+        int i = Random.Range(0, 100);
+        if(i == 50 || i == 25 || i == 75)
+        {
+            if(!m_bHasSpawnedRubble)
+            {
+                GameObject.Instantiate(m_pRubble, _vPos, new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
+                m_bHasSpawnedRubble = true;
+            }
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -33,7 +68,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();
@@ -41,6 +76,7 @@ public class Destruction : MonoBehaviour {
 
                     }
                 }
+                RandomRubbleSpawn(collision.contacts[0].point);
                 Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
 				Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             } 
@@ -54,7 +90,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();
@@ -62,6 +98,7 @@ public class Destruction : MonoBehaviour {
 
                     }
                 }
+                RandomRubbleSpawn(collision.contacts[0].point);
                 Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
                 Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             }
@@ -75,7 +112,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();
@@ -84,7 +121,7 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 //Debug.Log(GetComponent<AudioSource>().pitch);
-                
+                RandomRubbleSpawn(collision.contacts[0].point);
                 Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
                 Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             }

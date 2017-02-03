@@ -4,6 +4,7 @@ using UnityEngine;
 using VRStandardAssets.Utils;
 using Valve.VR;
 using DG.Tweening;
+using UnityEngine.UI;
 
 //[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Range(0, 5)]
     private float m_fEnergy = 0.5f;
+    [SerializeField]
+    [Range(0, 100)]
+    private float m_fLife = 100f;
     [SerializeField]
     [Range(100, 200)]
     private float m_fAdditionalGravity = 100f;
@@ -31,9 +35,11 @@ public class PlayerController : MonoBehaviour
     GameObject m_pEnergyBar;
     GameObject m_pLeftEnergyBar;
     GameObject m_pRightEnergyBar;
+    GameObject m_pHealthBar;
 
-    private float m_fInitialMoveSpeed;
+    float m_fInitialMoveSpeed;
     float m_fActualEnergy;
+    float m_fInitialLife;
 
     bool m_bIsDashing = false;
     bool m_bIsInCollision = true;
@@ -82,11 +88,12 @@ public class PlayerController : MonoBehaviour
         m_eStateMachine = StateMachine.Run;
         m_fInitialMoveSpeed = m_fMoveSpeed;  
         m_fActualEnergy = m_fEnergy;
+        m_fInitialLife = m_fLife;
 
         switch(m_ePlayMode)
         {
             case PlayMode.Debug:
-                m_pMyController = this.gameObject;
+                m_pMyController = GameObject.Find("CharacterController");
                 break;
             case PlayMode.VR:
                 m_pMyController = GameObject.Find("VRController");
@@ -104,7 +111,7 @@ public class PlayerController : MonoBehaviour
         m_pAirbornCue = GameObject.Find("AirbornSource").GetComponent<AudioSource>();
         m_pLandingCue = GameObject.Find("LandingSource").GetComponent<AudioSource>();
         m_pMusicSource = Camera.main.GetComponent<AudioSource>();
-
+        m_pHealthBar = GameObject.Find("HealthBar");
         m_pMusicSource.DOFade(0.3f, 2f);
     }
 
@@ -285,6 +292,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
             ShootVR(m_pMyController.transform);
+
+        if (Input.GetKey(KeyCode.H))
+            HealthInput(-Time.deltaTime);
 	}
 
     void EnergyBarBehavior()
@@ -306,6 +316,22 @@ public class PlayerController : MonoBehaviour
         }
         
         //Debug.Log(m_pEnergyBar.transform.localScale);
+    }
+
+    public void HealthInput(float _fAmount)
+    {
+        m_fLife += _fAmount;
+        if(m_pHealthBar != null)
+            m_pHealthBar.GetComponent<Slider>().value = m_fLife / m_fInitialLife;
+
+        m_fLife = Mathf.Clamp(m_fLife, 0, m_fInitialLife);
+        if (m_fLife <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     private void OnCollisionEnter(Collision collision)
