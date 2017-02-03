@@ -68,7 +68,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();
@@ -90,7 +90,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();
@@ -112,7 +112,7 @@ public class Destruction : MonoBehaviour {
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
-                    GetComponent<AudioSource>().pitch = Random.Range(0f, 3f);
+                    GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Play();

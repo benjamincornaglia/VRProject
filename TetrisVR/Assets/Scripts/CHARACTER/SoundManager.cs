@@ -11,19 +11,19 @@ public class SoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//m_pAirbornCue = GameObject.Find("AirbornSource").GetComponent<AudioSource>();
-		//m_pLandingCue = GameObject.Find("LandingSource").GetComponent<AudioSource>();
+		m_pAirbornCue = GameObject.Find("AirbornSource").GetComponent<AudioSource>();
+		m_pLandingCue = GameObject.Find("LandingSource").GetComponent<AudioSource>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	private void OnCollisionEnter(Collision collision)
 	{  if(collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PicaVoxelVolume")
 		{
-			
+
 			m_pLandingCue.pitch = Random.Range(0.5f, 1f);
 			if(!m_pLandingCue.isPlaying)
 			{
@@ -42,7 +42,7 @@ public class SoundManager : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PicaVoxelVolume")
 		{
-			
+
 			if (m_pLandingCue.isPlaying)
 				m_pLandingCue.Stop();
 
