@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     #region VR variables
     private Valve.VR.EVRButtonId dPadUp = Valve.VR.EVRButtonId.k_EButton_Axis0;
-    [HideInInspector]
+   // [HideInInspector]
     public SteamVR_TrackedObject trackedObject;
     private SteamVR_Controller.Device device;
     GameObject m_pVRController;
@@ -77,21 +77,23 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+		switch(m_ePlayMode)
+		{
+		case PlayMode.Debug:
+			m_pMyController = GameObject.Find("CharacterController");
+			break;
+		case PlayMode.VR:
+			m_pMyController = GameObject.Find("VRController");
+			break;
+		}
         InitializePointers();
 
         m_eStateMachine = StateMachine.Run;
         m_fInitialMoveSpeed = m_fMoveSpeed;  
         m_fActualEnergy = m_fEnergy;
 
-        switch(m_ePlayMode)
-        {
-            case PlayMode.Debug:
-                m_pMyController = GameObject.Find("CharacterController");
-                break;
-            case PlayMode.VR:
-                m_pMyController = GameObject.Find("VRController");
-                break;
-        }
+        
 
         
     }
@@ -103,8 +105,8 @@ public class PlayerController : MonoBehaviour
         m_pRightEnergyBar = GameObject.Find("RightEnergyBar");
         m_pAirbornCue = GameObject.Find("AirbornSource").GetComponent<AudioSource>();
         m_pLandingCue = GameObject.Find("LandingSource").GetComponent<AudioSource>();
-        m_pMusicSource = Camera.main.GetComponent<AudioSource>();
-
+		m_pMusicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
+		m_pVRController = m_pMyController;
         m_pMusicSource.DOFade(0.3f, 2f);
     }
 
@@ -140,7 +142,13 @@ public class PlayerController : MonoBehaviour
         EnergyBarBehavior();
         HandleCursor();
         
-
+//		if (m_pMyController.GetComponent<Rigidbody> ().velocity.magnitude > 1 || m_pMyController.GetComponent<Rigidbody> ().velocity.magnitude < -1) {
+//			if (m_pAirbornCue.volume < 1f)
+//				m_pAirbornCue.DOFade (1f, 2f);
+//			if (m_pAirbornCue.isPlaying == false)
+//				m_pAirbornCue.Play ();
+//		} else if (m_pMyController.GetComponent<Rigidbody> ().velocity.magnitude > -1 || m_pMyController.GetComponent<Rigidbody> ().velocity.magnitude < 1)
+//			m_pAirbornCue.Stop ();
     }
 
     void HandleCursor()
@@ -168,7 +176,7 @@ public class PlayerController : MonoBehaviour
                 Dash();
                 break;
             case StateMachine.EndJump:
-                m_pAirbornCue.DOFade(0f, 0.2f);
+                
                 //m_pMyController.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 m_eStateMachine = StateMachine.Run;
                 break;
@@ -185,13 +193,13 @@ public class PlayerController : MonoBehaviour
     }
 
     // (Debug) Use to shoot projectiles
-	void ShootVR(Transform vControllerTransform)
+	/*void ShootVR(Transform vControllerTransform)
 	{
 		
 		var p = Instantiate(Projectile, vControllerTransform.position + vControllerTransform.forward*5, transform.rotation);
 		p.GetComponent<Rigidbody>().AddForce(vControllerTransform.forward * m_fDebugShootForce, ForceMode.VelocityChange);
 
-	}
+	}*/
 
     // (Debug) Used to look around using the mouse
     void Look()
@@ -206,7 +214,7 @@ public class PlayerController : MonoBehaviour
     // (Debug/VR) Used to move around
     void Dash()
     {
-		//Debug.Log ("Dashing");
+		Debug.Log ("Dashing");
         if (m_fActualEnergy >= 0)
         {
             switch (m_eMoveMode)
@@ -234,15 +242,14 @@ public class PlayerController : MonoBehaviour
 
     void VRControllerInput()
     {
-        if (device == null)
-        {
-            return;
-        }
-
+		if (device == null) {
+			return;
+			Debug.Log ("No Device");
+		}
 		if (device.GetPressDown(dPadUp))
         {
 			m_eStateMachine = StateMachine.StartJump;
-			//Debug.Log ("dPad Up pressed");
+			Debug.Log ("dPad Up pressed");
             m_bIsInCollision = false;
             m_bIsDashing = true;
 			m_pVRController.GetComponent<AudioSource>().DOFade(0.7f, 1f);
@@ -283,8 +290,8 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if (Input.GetMouseButtonDown(0))
-            ShootVR(m_pMyController.transform);
+        //if (Input.GetMouseButtonDown(0))
+           // ShootVR(m_pMyController.transform);
 	}
 
     void EnergyBarBehavior()
@@ -322,6 +329,7 @@ public class PlayerController : MonoBehaviour
             }
             if (m_pAirbornCue.isPlaying)
                 m_pAirbornCue.Stop();
+			m_pAirbornCue.DOFade(0f, 0.2f);
                 
         }
         
@@ -340,6 +348,8 @@ public class PlayerController : MonoBehaviour
                 m_pAirbornCue.DOFade(1f, 2f);
             if (m_pAirbornCue.isPlaying == false)
                 m_pAirbornCue.Play();
+
+			Debug.Log ("Exit col");
         }
     }
 
