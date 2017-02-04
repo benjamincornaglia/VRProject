@@ -14,6 +14,8 @@ public class Manipulation : MonoBehaviour {
     float m_fVacuumSpeed = 1f;
     [SerializeField]
     float m_fVacuumStopDistance = 5f;
+    [SerializeField]
+    float m_fHealthRestoredPerComestible = 25f;
 
     LineRenderer m_pLineRenderer;
 
@@ -27,12 +29,28 @@ public class Manipulation : MonoBehaviour {
 	RaycastHit hit = new RaycastHit();
 	Vector3 raycastHitPos;
 
-	
+    GameObject m_pMyController;
+    GameObject m_pBloodParticles;
 
-	void Start () 
+    enum PlayMode { VR, Debug };
+    [SerializeField]
+    PlayMode m_ePlayMode;
+
+    void Start () 
 	{
         m_pLineRenderer = GetComponent<LineRenderer>();
-	}
+        switch (m_ePlayMode)
+        {
+            case PlayMode.Debug:
+                m_pMyController = GameObject.Find("CharacterController");
+                m_pBloodParticles = GameObject.Find("BloodParticles");
+                break;
+            case PlayMode.VR:
+                m_pMyController = GameObject.Find("VRController");
+                m_pBloodParticles = GameObject.Find("VRBloodParticles");
+                break;
+        }
+    }
 	
 	void Update () 
 	{
@@ -55,8 +73,8 @@ public class Manipulation : MonoBehaviour {
 		#region Definir la position finale du laser
 		if (m_bHasObject) 
 		{
-			
-			DrawLineRenderer (m_pObject.transform.position);
+			if(m_pObject != null)
+			    DrawLineRenderer (m_pObject.transform.position);
 		} 
 		else 
 		{
@@ -92,7 +110,7 @@ public class Manipulation : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, fwd, out hit, 100))
         {
-            if (hit.collider.gameObject.tag == "Piece" && m_pObject == null)
+            if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible") && m_pObject == null)
             {
                 m_pObject = hit.collider.gameObject;
                 if(m_pObject.GetComponent<shaderGlow>() != null)              
@@ -195,6 +213,18 @@ public class Manipulation : MonoBehaviour {
             }
 
 			
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Comestible")
+        {
+            m_pMyController.GetComponent<PlayerController>().HealthInput(m_fHealthRestoredPerComestible);
+            m_pBloodParticles.GetComponent<ParticleSystem>().Play();
+            GameObject.Destroy(other.gameObject);
+            m_bHasObject = false;
+            Debug.Log("Health Up");
         }
     }
 }

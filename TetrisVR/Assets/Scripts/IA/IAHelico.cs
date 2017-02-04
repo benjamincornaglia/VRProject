@@ -8,6 +8,8 @@ public class IAHelico : MonoBehaviour {
 	public float FireInterval = 5;
 	public GameObject Projectile;
 
+	public float DeathForce = 10.0f;
+
 	public GameObject Helices;
 
 	private float nextFire;
@@ -37,8 +39,9 @@ public class IAHelico : MonoBehaviour {
 	}
 
 	void Update() {
-
-		Helices.transform.Rotate(0, 20, 0);
+		if (alive) {
+			Helices.transform.Rotate(0, 20, 0);
+		}
 	}
 
 	// Update is called once per frame
@@ -73,7 +76,7 @@ public class IAHelico : MonoBehaviour {
 		lastDistance = distance;
 
 		if (transform.position.y < Target.transform.position.y + 150.0f) {
-			rb.AddForce(-Physics.gravity * 5.5f * Time.deltaTime);
+			rb.AddForce(-Physics.gravity * 10.5f * Time.deltaTime);
 		}
 
 		if (rb.velocity.y < -10) {
@@ -82,6 +85,8 @@ public class IAHelico : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		alive = false;
+		if (collision.impulse.magnitude > DeathForce) {
+			alive = false;
+		}
 	}
 }

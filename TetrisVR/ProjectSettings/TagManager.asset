@@ -8,6 +8,8 @@ TagManager:
   - Anchor
   - Piece
   - Destructor
+  - Floor
+  - Comestible
   layers:
   - Default
   - TransparentFX
