@@ -750,7 +750,7 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
-  SelfShadingIntensity: 0.2
+  SelfShadingIntensity: 0.4
   CastShadows: 1
   ReceiveShadows: 1
   ChunkLayer: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_Truck3.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -410840
+  thisInstanceId: -14202
   Undone: 0
 --- !u!114 &114615050734678264
 MonoBehaviour:

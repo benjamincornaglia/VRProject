@@ -333,7 +333,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/PROPS/Bat_hydrant.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -524154
+  thisInstanceId: -49460
   Undone: 0
 --- !u!114 &114629706845016658
 MonoBehaviour:

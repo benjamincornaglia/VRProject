@@ -541,7 +541,7 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
-  SelfShadingIntensity: 0.2
+  SelfShadingIntensity: 0.4
   CastShadows: 1
   ReceiveShadows: 1
   ChunkLayer: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/PROPS/Bat_container1.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -474864
+  thisInstanceId: -10492
   Undone: 0
 --- !u!114 &114332910750666862
 MonoBehaviour:

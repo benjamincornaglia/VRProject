@@ -4662,7 +4662,7 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
-  SelfShadingIntensity: 0.2
+  SelfShadingIntensity: 0.4
   CastShadows: 1
   ReceiveShadows: 1
   ChunkLayer: 0
@@ -4702,7 +4702,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_HouseSquare_66x66x25_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -106312
+  thisInstanceId: -13578
   Undone: 0
 --- !u!114 &114278211996433890
 MonoBehaviour:

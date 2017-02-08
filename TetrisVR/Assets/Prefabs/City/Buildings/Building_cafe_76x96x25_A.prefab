@@ -5608,7 +5608,7 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
-  SelfShadingIntensity: 0.2
+  SelfShadingIntensity: 0.4
   CastShadows: 1
   ReceiveShadows: 1
   ChunkLayer: 0
@@ -5648,7 +5648,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_cafe_76x96x25_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -60986
+  thisInstanceId: -7564
   Undone: 1
 --- !u!114 &114498982240851238
 MonoBehaviour:

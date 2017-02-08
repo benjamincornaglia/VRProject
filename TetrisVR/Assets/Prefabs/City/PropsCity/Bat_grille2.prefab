@@ -2664,7 +2664,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/PROPS/Bat_grille2.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -515600
+  thisInstanceId: -42686
   Undone: 0
 --- !u!114 &114461469454359856
 MonoBehaviour:

@@ -941,7 +941,7 @@ MonoBehaviour:
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
-  SelfShadingIntensity: 0.2
+  SelfShadingIntensity: 0.4
   CastShadows: 1
   ReceiveShadows: 1
   ChunkLayer: 0
@@ -981,7 +981,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/PROPS/Bat_pottyHer.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -547474
+  thisInstanceId: -46440
   Undone: 0
 --- !u!114 &114881456090306140
 MonoBehaviour:

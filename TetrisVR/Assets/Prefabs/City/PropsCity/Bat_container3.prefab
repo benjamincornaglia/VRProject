@@ -605,7 +605,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/PROPS/Bat_container3.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -489062
+  thisInstanceId: -33926
   Undone: 0
 --- !u!114 &114701956046550940
 MonoBehaviour:
