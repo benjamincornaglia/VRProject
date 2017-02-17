@@ -113,6 +113,9 @@ public class PlayerController : MonoBehaviour
         m_pMusicSource = Camera.main.GetComponent<AudioSource>();
         m_pHealthBar = GameObject.Find("HealthBar");
         m_pMusicSource.DOFade(0.3f, 2f);
+
+        if (m_pHealthBar)
+            Debug.Log("HealthBar found");
     }
 
     // Update is called once per frame
@@ -146,8 +149,8 @@ public class PlayerController : MonoBehaviour
 
         EnergyBarBehavior();
         HandleCursor();
-        
 
+        HealthInput(-Time.deltaTime);
     }
 
     void HandleCursor()
@@ -307,7 +310,8 @@ public class PlayerController : MonoBehaviour
         switch(m_ePlayMode)
         {
             case PlayMode.Debug:
-                m_pEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pEnergyBar.transform.localScale.y, m_pEnergyBar.transform.localScale.z);
+                if(m_pEnergyBar != null)
+                    m_pEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pEnergyBar.transform.localScale.y, m_pEnergyBar.transform.localScale.z);
                 break;
             case PlayMode.VR:
                 m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
