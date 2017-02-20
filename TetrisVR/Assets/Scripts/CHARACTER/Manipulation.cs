@@ -170,6 +170,8 @@ public class Manipulation : MonoBehaviour {
             m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             m_pObject.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 200f, ForceMode.Impulse);
             m_pObject.GetComponent<Rigidbody>().useGravity = true;
+            if (m_pObject.GetComponent<Destruction>())
+                m_pObject.GetComponent<Destruction>().m_bGrabbed = false;
         }
     }
 
@@ -181,13 +183,18 @@ public class Manipulation : MonoBehaviour {
             m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             m_pObject.GetComponent<Rigidbody>().useGravity = false;
             if (m_pObject.GetComponent<Destruction>())
+            {
                 m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
+                m_pObject.GetComponent<Destruction>().m_bGrabbed = true;
+            }
         }
         if (Input.GetMouseButtonUp(0) && m_pObject != null)
         {
             m_bHasObject = false;
             m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             m_pObject.GetComponent<Rigidbody>().useGravity = true;
+            if (m_pObject.GetComponent<Destruction>())
+                m_pObject.GetComponent<Destruction>().m_bGrabbed = false;
         }
     }
 
@@ -201,7 +208,10 @@ public class Manipulation : MonoBehaviour {
 				m_pObject.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 				m_pObject.GetComponent<Rigidbody> ().useGravity = false;
                 if(m_pObject.GetComponent<Destruction>())
+                {
                     m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
+                    m_pObject.GetComponent<Destruction>().m_bGrabbed = true;
+                }
 			} 
             if (device.GetPressUp(triggerButton) && m_pObject != null)
             {
@@ -209,7 +219,8 @@ public class Manipulation : MonoBehaviour {
                 m_bHasObject = false;
                 m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 m_pObject.GetComponent<Rigidbody>().useGravity = true;
-
+                if (m_pObject.GetComponent<Destruction>())
+                    m_pObject.GetComponent<Destruction>().m_bGrabbed = false;
                 if (!m_bHasObject)
                 {
                     m_pObject.GetComponent<Rigidbody>().AddForce(velocityFromLastPositions() * 500, ForceMode.Impulse);

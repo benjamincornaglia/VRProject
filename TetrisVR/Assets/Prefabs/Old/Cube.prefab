@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981709498550210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -21.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -161,7 +161,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0.2
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -205,9 +205,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pExploder: {fileID: 0}
   m_fMaxExplosionRadius: 5
-  m_fDestructionThreshold: 0
+  m_fDestructionThreshold: 1
   m_pClip: {fileID: 0}
   m_pRubble: {fileID: 1981709498550210}
+  m_fSpawnTimer: 2
+  m_iRubbleStacks: 3
+  m_bCanSpawnRubbles: 0
+  avPos: []
 --- !u!114 &114825909086128508
 MonoBehaviour:
   m_ObjectHideFlags: 1
