@@ -18,6 +18,7 @@ public class Destruction : MonoBehaviour {
     float m_fSpawnRubbleTimer = 0f;
     public float m_fSpawnTimer = 10f;
 
+    public bool m_bCanSpawnRubbles = false;
 	// Use this for initialization
 	void Start () {
         m_pExploder = this.GetComponent<Exploder>();
@@ -46,13 +47,18 @@ public class Destruction : MonoBehaviour {
 
     void RandomRubbleSpawn(Vector3 _vPos)
     {
+        
         int i = Random.Range(0, 100);
-        if(i == 50 || i == 25 || i == 75)
+        if(i >= 50)
         {
-            if(!m_bHasSpawnedRubble)
+            if(!m_bHasSpawnedRubble && m_bCanSpawnRubbles)
             {
-                GameObject.Instantiate(m_pRubble, _vPos, new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
+                GameObject pRubble = GameObject.Instantiate(m_pRubble, _vPos, new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
+                pRubble.transform.localScale = new Vector3(Random.Range(1, 3), Random.Range(1, 3), Random.Range(1, 3));
                 m_bHasSpawnedRubble = true;
+                pRubble.GetComponent<Destruction>().m_bCanSpawnRubbles = false;
+                pRubble.GetComponent<shaderGlow>().lightOff();
+                Debug.Log("Rubble Spawn");
             }
         }
     }
@@ -77,8 +83,8 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 RandomRubbleSpawn(collision.contacts[0].point);
-                Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
-				Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+                //Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
+				//Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             } 
         }
         else if(this.gameObject.tag == "Piece" && collision.gameObject.tag == "PicaVoxelVolume")
@@ -99,8 +105,8 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 RandomRubbleSpawn(collision.contacts[0].point);
-                Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
-                Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+                //Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
+                //Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             }
         }
         else if(this.gameObject.tag == "PicaVoxelVolume" && collision.gameObject.tag == "PicaVoxelVolume")
@@ -122,8 +128,8 @@ public class Destruction : MonoBehaviour {
                 }
                 //Debug.Log(GetComponent<AudioSource>().pitch);
                 RandomRubbleSpawn(collision.contacts[0].point);
-                Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
-                Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+                //Debug.Log("Relative Velo = " + collision.relativeVelocity.magnitude);
+                //Debug.Log("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             }
         } 
     }
