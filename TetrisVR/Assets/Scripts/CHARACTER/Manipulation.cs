@@ -180,6 +180,8 @@ public class Manipulation : MonoBehaviour {
             m_bHasObject = true;
             m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             m_pObject.GetComponent<Rigidbody>().useGravity = false;
+            if (m_pObject.GetComponent<Destruction>())
+                m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
         }
         if (Input.GetMouseButtonUp(0) && m_pObject != null)
         {
@@ -198,6 +200,8 @@ public class Manipulation : MonoBehaviour {
 				m_bHasObject = true;
 				m_pObject.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 				m_pObject.GetComponent<Rigidbody> ().useGravity = false;
+                if(m_pObject.GetComponent<Destruction>())
+                    m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
 			} 
             if (device.GetPressUp(triggerButton) && m_pObject != null)
             {
@@ -220,7 +224,7 @@ public class Manipulation : MonoBehaviour {
     {
         if(other.tag == "Comestible")
         {
-            m_pMyController.GetComponent<PlayerController>().HealthInput(m_fHealthRestoredPerComestible);
+            m_pMyController.GetComponent<HealthManager>().HealthInput(m_fHealthRestoredPerComestible);
             m_pBloodParticles.GetComponent<ParticleSystem>().Play();
             GameObject.Destroy(other.gameObject);
             m_bHasObject = false;
