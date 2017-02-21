@@ -27,6 +27,10 @@ public class Destruction : MonoBehaviour {
 
     public bool m_bGrabbed = false;
 
+    public ScoreManager _themanager = null;
+    private bool _collisioned = false;
+    float m_fColTimer = 0f;
+
     // Use this for initialization
     void Start () {
         m_pExploder = this.GetComponent<Exploder>();
@@ -37,7 +41,15 @@ public class Destruction : MonoBehaviour {
 
         ManageSpawnTimer();
         CheckMovementVelocity();
-	}
+
+        if (_collisioned)
+            m_fColTimer += Time.deltaTime;
+        if (m_fColTimer > 1)
+        {
+            _collisioned = false;
+            m_fColTimer = 0f;
+        }
+    }
 
     void ManageSpawnTimer()
     {
@@ -99,9 +111,9 @@ public class Destruction : MonoBehaviour {
         if (afSpeeds.Count > 3)
         {
             if(!m_bGrabbed)
-                fDiff = Mathf.Clamp(afSpeeds[2] + 1, 1, m_fMaxExplosionRadius);
+                fDiff = 2 + Mathf.Clamp(afSpeeds[2] + 1, 1, m_fMaxExplosionRadius);
             else
-                fDiff = Mathf.Clamp(afSpeeds[2]*10f + 1, 1, m_fMaxExplosionRadius);
+                fDiff = 2 + Mathf.Clamp(afSpeeds[2]*10f + 1, 1, m_fMaxExplosionRadius);
 
         }
     }
@@ -110,13 +122,11 @@ public class Destruction : MonoBehaviour {
     {
 		if(this.gameObject.tag == "Destructor" && collision.gameObject.tag == "PicaVoxelVolume")
         {
-            
-
-            if(fDiff > m_fDestructionThreshold)
+            if (fDiff > m_fDestructionThreshold)
             {
                 //float fExplosionRadius = collision.relativeVelocity.magnitude * 1000f;
                 float fExplosionRadius = fDiff;
-                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
+                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 1, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
@@ -129,19 +139,24 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 RandomRubbleSpawn(collision.contacts[0].point);
+                if(_collisioned == false)
+                {
+                    _collisioned = true;
+                    _themanager.swipeHappen(collision.contacts[0].point);
+                }
+                
                 //Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
-				//Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
+                //Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             } 
         }
         else if(this.gameObject.tag == "Piece" && collision.gameObject.tag == "PicaVoxelVolume")
         {
-            Debug.Log("fDiff = " + fDiff);
             if (fDiff > m_fDestructionThreshold)
             {
                 
                 float fExplosionRadius = fDiff;
                 //float fExplosionRadius = Random.Range(2, 10);
-                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
+                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 1, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
@@ -154,7 +169,20 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 RandomRubbleSpawn(collision.contacts[0].point);
-                
+                if(!Manipulation.m_bHasObject && !_collisioned)
+                {
+                    _collisioned = true;
+                    _themanager.throwhappen(collision.contacts[0].point);
+                    transform.GetChild(0).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
+                    transform.GetChild(0).GetComponent<AudioSource>().Play();
+                }
+                else if(Manipulation.m_bHasObject && !_collisioned)
+                {
+                    _collisioned = true;
+                    _themanager.swipeHappen(collision.contacts[0].point);
+                    transform.GetChild(0).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
+                    transform.GetChild(1).GetComponent<AudioSource>().Play();
+                }
             }
             //Debug.Log("Boom.");
         }
@@ -163,7 +191,7 @@ public class Destruction : MonoBehaviour {
             if (collision.relativeVelocity.magnitude > m_fDestructionThreshold)
             {
                 float fExplosionRadius = fDiff;
-                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius);
+                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 1, m_fMaxExplosionRadius);
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {

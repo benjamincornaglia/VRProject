@@ -924,6 +924,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -1448,7 +1453,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 28784
+  thisInstanceId: 214314
   Undone: 0
 --- !u!4 &20639792
 Transform:
@@ -1456,14 +1461,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20639786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 63, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: 14.39904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 969971016}
   - {fileID: 1830630048}
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &20684346
 GameObject:
@@ -1890,7 +1895,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 28830
+  thisInstanceId: 214360
   Undone: 0
 --- !u!4 &24403298
 Transform:
@@ -1898,14 +1903,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 24403294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 63, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: 14.39904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1513045014}
   - {fileID: 2114903111}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &24576035
 GameObject:
@@ -2117,16 +2122,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82425145537359322, guid: cbd11505f71244649a2bf00cc8d775a6,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
         type: 2}
-      propertyPath: m_fDestructionThreshold
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -3317,7 +3317,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 28996
+  thisInstanceId: 214526
   Undone: 0
 --- !u!4 &45966353
 Transform:
@@ -3325,14 +3325,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45966347}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 23, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: -25.60096, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1505267653}
   - {fileID: 936589558}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47181258
 GameObject:
@@ -6137,7 +6137,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 29326
+  thisInstanceId: 214856
   Undone: 0
 --- !u!4 &87952033
 Transform:
@@ -6145,14 +6145,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87952027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 83.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: 34.49904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1524750965}
   - {fileID: 787686268}
-  m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &88638623
 GameObject:
@@ -8681,7 +8681,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 29626
+  thisInstanceId: 215156
   Undone: 0
 --- !u!4 &129184360
 Transform:
@@ -8689,14 +8689,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129184354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 43.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: -5.5009613, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 398460953}
   - {fileID: 1320316804}
-  m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130123605
 GameObject:
@@ -8996,6 +8996,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -10041,7 +10046,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 29782
+  thisInstanceId: 215312
   Undone: 0
 --- !u!4 &150412893
 Transform:
@@ -10049,14 +10054,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 150412887}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 63, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: 14.39904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 298741795}
   - {fileID: 364067851}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150789982
 GameObject:
@@ -10812,7 +10817,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 29870
+  thisInstanceId: 215400
   Undone: 0
 --- !u!4 &162835540
 Transform:
@@ -10820,14 +10825,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 162835536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 83.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: 34.49904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1166547116}
   - {fileID: 1409528304}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162907930
 GameObject:
@@ -11350,7 +11355,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 29928
+  thisInstanceId: 215458
   Undone: 0
 --- !u!4 &166918181
 Transform:
@@ -11358,14 +11363,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 166918175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 83.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: 34.49904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479787200}
   - {fileID: 2050469612}
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168789493
 GameObject:
@@ -12757,7 +12762,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 30092
+  thisInstanceId: 215622
   Undone: 0
 --- !u!4 &195164980
 Transform:
@@ -12765,14 +12770,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195164974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 83.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: 34.49904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 24576037}
   - {fileID: 643664386}
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &199887714
 GameObject:
@@ -19319,6 +19324,47 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 518967555}
+  - {fileID: 541669174}
+  - {fileID: 1010632028}
+  - {fileID: 337521016}
+  - {fileID: 2130131404}
+  - {fileID: 24403298}
+  - {fileID: 162835540}
+  - {fileID: 150412893}
+  - {fileID: 1865061938}
+  - {fileID: 356236983}
+  - {fileID: 1365713142}
+  - {fileID: 1323706729}
+  - {fileID: 1831732890}
+  - {fileID: 1390414132}
+  - {fileID: 45966353}
+  - {fileID: 1994775971}
+  - {fileID: 536351489}
+  - {fileID: 1586336552}
+  - {fileID: 166918181}
+  - {fileID: 1577032081}
+  - {fileID: 739256701}
+  - {fileID: 762717175}
+  - {fileID: 1618946295}
+  - {fileID: 606497216}
+  - {fileID: 927786234}
+  - {fileID: 195164980}
+  - {fileID: 1809613361}
+  - {fileID: 2145153163}
+  - {fileID: 87952033}
+  - {fileID: 1689720036}
+  - {fileID: 606256665}
+  - {fileID: 1313880862}
+  - {fileID: 1498539715}
+  - {fileID: 453362903}
+  - {fileID: 1177772963}
+  - {fileID: 1388657469}
+  - {fileID: 1760802451}
+  - {fileID: 20639792}
+  - {fileID: 1227643320}
+  - {fileID: 683190446}
+  - {fileID: 565305883}
+  - {fileID: 129184360}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21155,7 +21201,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 31134
+  thisInstanceId: 216664
   Undone: 0
 --- !u!4 &337521016
 Transform:
@@ -21163,14 +21209,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 337521013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 23, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: -25.60096, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 611616960}
   - {fileID: 1847646719}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &337521017
 HingeJoint:
@@ -22269,7 +22315,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 31258
+  thisInstanceId: 216788
   Undone: 0
 --- !u!4 &356236983
 Transform:
@@ -22277,14 +22323,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356236977}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 23, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: -25.60096, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1024087812}
   - {fileID: 1228814805}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &356905862
 GameObject:
@@ -22976,6 +23022,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -27105,7 +27156,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 31850
+  thisInstanceId: 217380
   Undone: 1
 --- !u!4 &453362903
 Transform:
@@ -27113,14 +27164,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 453362897}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -191.4, y: 2, z: 76.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -403.4762, y: -46.60096, z: 24.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 139255250}
   - {fileID: 595245871}
-  m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453840204
 GameObject:
@@ -31382,7 +31433,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 32374
+  thisInstanceId: 217904
   Undone: 0
 --- !u!4 &536351489
 Transform:
@@ -31390,14 +31441,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 536351483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 63, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: 14.39904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1194040867}
   - {fileID: 653880608}
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537722167
 GameObject:
@@ -31709,7 +31760,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 541669173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 143.09, y: 7.830003, z: -8.15}
+  m_LocalPosition: {x: -68.98619, y: -40.770958, z: -60.292755}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 850643557}
@@ -31721,8 +31772,8 @@ Transform:
   - {fileID: 1436529893}
   - {fileID: 1516743058}
   - {fileID: 1663706111}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545622873
 GameObject:
@@ -32969,7 +33020,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 32560
+  thisInstanceId: 218090
   Undone: 1
 --- !u!4 &565305883
 Transform:
@@ -32977,14 +33028,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565305877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -283.8, y: 2, z: 76.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -495.87616, y: -46.60096, z: 24.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 399657367}
   - {fileID: 39313502}
-  m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567526649
 GameObject:
@@ -33435,6 +33486,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -34115,7 +34171,7 @@ RectTransform:
   m_Children:
   - {fileID: 1277394012}
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35565,7 +35621,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 32864
+  thisInstanceId: 218394
   Undone: 1
 --- !u!4 &606256665
 Transform:
@@ -35573,14 +35629,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606256659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -191.4, y: 2, z: -41.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -403.4762, y: -46.60096, z: -93.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 28563846}
   - {fileID: 1002821516}
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606497210
 GameObject:
@@ -35719,7 +35775,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 32874
+  thisInstanceId: 218404
   Undone: 1
 --- !u!4 &606497216
 Transform:
@@ -35727,14 +35783,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606497210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -283.8, y: 2, z: -41.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -495.87616, y: -46.60096, z: -93.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1508668738}
   - {fileID: 1984294236}
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608103617
 GameObject:
@@ -36094,6 +36150,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9e1bf3f16e86dc4c803ba3448fae3b2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &610313405 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1203665635503546, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 610313404}
+--- !u!114 &610313406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610313405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4b0eab4f7503049855bb0e2916a3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _score: 0
+  _bonuscombo: 0
+  _swipecounter: 0
+  _bonustime: 0
+  m_pTxtPrefab: {fileID: 1517615334243708, guid: 6faa8e877b75b4d45a3ef5a11c30ab12,
+    type: 2}
+  m_fSpawnDistance: 50
 --- !u!1 &611048791
 GameObject:
   m_ObjectHideFlags: 0
@@ -39633,7 +39712,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 33348
+  thisInstanceId: 218876
   Undone: 0
 --- !u!4 &683190446
 Transform:
@@ -39641,14 +39720,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683190440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 23, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: -25.60096, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 884701190}
   - {fileID: 303385447}
-  m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684780671
 GameObject:
@@ -41657,7 +41736,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 33588
+  thisInstanceId: 219116
   Undone: 1
 --- !u!4 &739256701
 Transform:
@@ -41665,14 +41744,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 739256695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -95.6, y: 2, z: -41.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -307.67618, y: -46.60096, z: -93.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1787456374}
   - {fileID: 831745207}
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &739534605
 GameObject:
@@ -43399,7 +43478,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 33794
+  thisInstanceId: 219322
   Undone: 0
 --- !u!4 &762717175
 Transform:
@@ -43407,14 +43486,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762717169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 43.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: -5.5009613, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1078287776}
   - {fileID: 1851481850}
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763277302
 GameObject:
@@ -50201,6 +50280,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -52886,7 +52970,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 34942
+  thisInstanceId: 220472
   Undone: 0
 --- !u!4 &927786234
 Transform:
@@ -52894,14 +52978,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 927786228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 23, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: -25.60096, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1117750240}
   - {fileID: 1102550450}
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927951435
 GameObject:
@@ -57714,7 +57798,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 35532
+  thisInstanceId: 221064
   Undone: 1
 --- !u!4 &1010632028
 Transform:
@@ -57722,14 +57806,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1010632025}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -95.6, y: 2, z: 76.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -307.67618, y: -46.60096, z: 24.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 812145520}
   - {fileID: 975254173}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!59 &1010632029
 HingeJoint:
@@ -62846,6 +62930,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -69795,7 +69884,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 36668
+  thisInstanceId: 222200
   Undone: 0
 --- !u!4 &1177772963
 Transform:
@@ -69803,14 +69892,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177772957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 23, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: -25.60096, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 588453505}
   - {fileID: 1717822263}
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179704826
 GameObject:
@@ -70569,6 +70658,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -72626,7 +72720,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 37000
+  thisInstanceId: 222530
   Undone: 0
 --- !u!4 &1227643320
 Transform:
@@ -72634,14 +72728,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1227643314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 83.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: 34.49904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1936793087}
   - {fileID: 2027209992}
-  m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227792895
 GameObject:
@@ -77030,7 +77124,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 37538
+  thisInstanceId: 223068
   Undone: 0
 --- !u!4 &1313880862
 Transform:
@@ -77038,14 +77132,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1313880856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 43.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: -5.5009613, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 298677227}
   - {fileID: 1785697600}
-  m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314098342
 GameObject:
@@ -78155,7 +78249,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 37666
+  thisInstanceId: 223196
   Undone: 0
 --- !u!4 &1323706729
 Transform:
@@ -78163,14 +78257,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1323706723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 43.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: -5.5009613, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2006912968}
   - {fileID: 1922037237}
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324411852
 GameObject:
@@ -78460,6 +78554,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334019784}
   m_Mesh: {fileID: 4300000, guid: d769030c8ffb33f458e00197c8f9cd89, type: 2}
+--- !u!1001 &1335261469
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 203.89207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.465961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26.324394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1336248988
 GameObject:
   m_ObjectHideFlags: 0
@@ -80039,7 +80175,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 37892
+  thisInstanceId: 223422
   Undone: 1
 --- !u!4 &1365713142
 Transform:
@@ -80047,14 +80183,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365713136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: 2, z: 76.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -215.27618, y: -46.60096, z: 24.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 161745008}
   - {fileID: 1008274831}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1366160249
 GameObject:
@@ -81825,7 +81961,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 38106
+  thisInstanceId: 223636
   Undone: 0
 --- !u!4 &1388657469
 Transform:
@@ -81833,14 +81969,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388657463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 83.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: 34.49904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1239020053}
   - {fileID: 587731484}
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388758557
 GameObject:
@@ -82459,7 +82595,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 38176
+  thisInstanceId: 223706
   Undone: 1
 --- !u!4 &1390414132
 Transform:
@@ -82467,14 +82603,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1390414126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: 2, z: -41.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -215.27618, y: -46.60096, z: -93.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1354618865}
   - {fileID: 1058786054}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1395680947
 GameObject:
@@ -88909,7 +89045,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 38974
+  thisInstanceId: 224504
   Undone: 0
 --- !u!4 &1498539715
 Transform:
@@ -88917,14 +89053,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1498539709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 43.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: -5.5009613, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 623401277}
   - {fileID: 192733257}
-  m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501294255
 GameObject:
@@ -92945,7 +93081,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 39472
+  thisInstanceId: 225002
   Undone: 0
 --- !u!4 &1577032081
 Transform:
@@ -92953,14 +93089,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577032075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 23, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: -25.60096, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1443566509}
   - {fileID: 1570146387}
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577424468
 GameObject:
@@ -93771,7 +93907,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 39566
+  thisInstanceId: 225096
   Undone: 0
 --- !u!4 &1586336552
 Transform:
@@ -93779,14 +93915,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1586336546}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 63, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: 14.39904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 531845168}
   - {fileID: 1232002003}
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586884262
 GameObject:
@@ -95135,7 +95271,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 39724
+  thisInstanceId: 225254
   Undone: 0
 --- !u!4 &1618946295
 Transform:
@@ -95143,14 +95279,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1618946289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 43.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: -5.5009613, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 130123607}
   - {fileID: 1541059629}
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620132857
 GameObject:
@@ -98650,7 +98786,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 40152
+  thisInstanceId: 225682
   Undone: 0
 --- !u!4 &1689720036
 Transform:
@@ -98658,14 +98794,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1689720030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 23, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: -25.60096, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427766246}
   - {fileID: 1292560759}
-  m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693087147
 GameObject:
@@ -103192,7 +103328,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 40702
+  thisInstanceId: 226232
   Undone: 0
 --- !u!4 &1760802451
 Transform:
@@ -103200,14 +103336,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1760802445}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 63, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: 14.39904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1983707539}
   - {fileID: 832031725}
-  m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761221073
 GameObject:
@@ -105606,7 +105742,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 40992
+  thisInstanceId: 226522
   Undone: 0
 --- !u!4 &1809613361
 Transform:
@@ -105614,14 +105750,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809613355}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -281.8, y: 63, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -493.87616, y: 14.39904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1752388089}
   - {fileID: 617122750}
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1811388321
 GameObject:
@@ -106906,7 +107042,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 41146
+  thisInstanceId: 226676
   Undone: 0
 --- !u!4 &1831732890
 Transform:
@@ -106914,14 +107050,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1831732884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 43.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: -5.5009613, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1724568311}
   - {fileID: 363091582}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833133865
 GameObject:
@@ -108790,7 +108926,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 41372
+  thisInstanceId: 226902
   Undone: 0
 --- !u!4 &1865061938
 Transform:
@@ -108798,14 +108934,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1865061932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 83.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: 34.49904, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1881806107}
   - {fileID: 1866732761}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866732759
 GameObject:
@@ -116523,7 +116659,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 42324
+  thisInstanceId: 227854
   Undone: 0
 --- !u!4 &1994775971
 Transform:
@@ -116531,14 +116667,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994775965}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 83.1, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -213.27618, y: 34.49904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1818876405}
   - {fileID: 1878286170}
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1996180552
 GameObject:
@@ -120776,6 +120912,11 @@ Prefab:
       propertyPath: m_fDestructionThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114561092635396668, guid: cbd11505f71244649a2bf00cc8d775a6,
+        type: 2}
+      propertyPath: _themanager
+      value: 
+      objectReference: {fileID: 610313406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -121733,7 +121874,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 42960
+  thisInstanceId: 228490
   Undone: 0
 --- !u!4 &2130131404
 Transform:
@@ -121741,14 +121882,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130131400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.6, y: 43.1, z: 79.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -305.67618, y: -5.5009613, z: 27.557243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 870309144}
   - {fileID: 917390590}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134403651
 GameObject:
@@ -122559,7 +122700,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 43054
+  thisInstanceId: 228584
   Undone: 0
 --- !u!4 &2145153163
 Transform:
@@ -122567,12 +122708,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145153157}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -189.4, y: 63, z: -38.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -401.4762, y: 14.39904, z: -90.542755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1231407775}
   - {fileID: 621263778}
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_Father: {fileID: 306432519}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
