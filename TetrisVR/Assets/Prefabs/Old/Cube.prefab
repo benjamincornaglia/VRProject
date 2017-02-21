@@ -42,7 +42,7 @@ Transform:
   m_GameObject: {fileID: 1981709498550210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -21.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_fSpawnTimer: 2
   m_iRubbleStacks: 3
   m_bCanSpawnRubbles: 0
-  avPos: []
+  m_bGrabbed: 0
 --- !u!114 &114825909086128508
 MonoBehaviour:
   m_ObjectHideFlags: 1
