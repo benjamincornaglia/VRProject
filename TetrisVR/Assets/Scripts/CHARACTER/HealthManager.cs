@@ -33,7 +33,7 @@ public class HealthManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        HealthInput(-Time.deltaTime);
+        //HealthInput(-Time.deltaTime);
 	}
 
     public void HealthInput(float _fAmount)
