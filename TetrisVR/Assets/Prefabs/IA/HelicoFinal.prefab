@@ -55800,6 +55800,7 @@ MonoBehaviour:
   Speed: 5
   FireInterval: 5
   Projectile: {fileID: 1909460707280086, guid: 47157c5860cf2ac4ca25adea280c246b, type: 2}
+  DeathForce: 10
   Helices: {fileID: 1177018961772014}
 --- !u!114 &114870784328255118
 MonoBehaviour:

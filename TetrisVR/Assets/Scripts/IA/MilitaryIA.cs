@@ -78,7 +78,7 @@ public class MilitaryIA : MonoBehaviour {
 	void Update () {
 		if (Vector3.Distance(lastTargetPosition, Target.transform.position) > UpdateDistance) {
 			lastTargetPosition = Target.transform.position;
-			agent.destination = Target.transform.position;
+            agent.destination = new Vector3(Target.transform.position.x, 0, Target.transform.position.z);
 		}
 
 		if (Vector3.Distance(this.transform.position, Target.transform.position) < FireDistance) {
