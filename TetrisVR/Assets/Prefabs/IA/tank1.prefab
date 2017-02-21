@@ -30551,7 +30551,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_CopCar2.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 240070
+  thisInstanceId: -1095642
   Undone: 1
 --- !u!114 &114234057167083420
 MonoBehaviour:

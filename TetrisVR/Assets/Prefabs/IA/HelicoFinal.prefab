@@ -8728,9 +8728,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4652842669413900}
   - component: {fileID: 114052252809700014}
-  - component: {fileID: 135210853938430990}
   - component: {fileID: 114182986424366956}
   - component: {fileID: 54799882421909304}
+  - component: {fileID: 65418138300464932}
   m_Layer: 0
   m_Name: HelicoFinal
   m_TagString: PicaVoxelVolume
@@ -13539,7 +13539,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489551089751698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: -25, z: -25}
+  m_LocalPosition: {x: -24.59, y: -25, z: -24.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4455780915264128}
@@ -20485,7 +20485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475241494416694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.51, y: -0.2, z: -0.52}
+  m_LocalPosition: {x: 1.09, y: -0.2, z: -0.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4864166724663426}
@@ -48368,6 +48368,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 50, y: 50, z: 50}
   m_Center: {x: 25, y: 25, z: 25}
+--- !u!65 &65418138300464932
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712441964650982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.81, y: 13.01, z: 24.46}
+  m_Center: {x: 1.02, y: 6.2, z: -4.58}
 --- !u!114 &114000923364294868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48836,7 +48848,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_Helicopter3Copter.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -617668
+  thisInstanceId: -1101744
   Undone: 1
 --- !u!114 &114055677196987220
 MonoBehaviour:
@@ -50468,7 +50480,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_Helicopter3Helices.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -617426
+  thisInstanceId: -1102004
   Undone: 1
 --- !u!114 &114229742542573778
 MonoBehaviour:
@@ -56808,15 +56820,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsUpdated: 0
---- !u!135 &135210853938430990
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1712441964650982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 9.4
-  m_Center: {x: 0, y: 6.44, z: 0}
