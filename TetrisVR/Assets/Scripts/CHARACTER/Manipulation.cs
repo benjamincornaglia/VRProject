@@ -6,7 +6,7 @@ using Valve.VR;
 public class Manipulation : MonoBehaviour {
 
     public GameObject m_pObject;
-    bool m_bHasObject;
+    public static bool m_bHasObject;
 
 	const int nbRegisteredLastPosition = 2;
     

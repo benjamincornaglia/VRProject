@@ -5,15 +5,19 @@ using UnityEngine;
 public class SwippingObject : MonoBehaviour {
 
 	public ScoreManager _themanager = null;
-	public string ObjectsTag = "wall";
+	public string ObjectsTag = "PicaVoxelVolume";
+    bool _collisioned = false;
+    float m_fColTimer = 0f;
 
-	void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag == ObjectsTag)
+		if (col.gameObject.tag == ObjectsTag && _collisioned == false)
 		{
-			_themanager.swipeHappen ();
+			
+            _collisioned = true;
 		}
-	}
+        _themanager.swipeHappen(col.contacts[0].point);
+    }
 
 	void Start() {
 		if (_themanager == null) {
@@ -24,4 +28,15 @@ public class SwippingObject : MonoBehaviour {
 			throw new System.ArgumentException ("SwipCounter : Merci de renseigner le tag des objets destructibles !");
 		}
 	}
+
+    void Update()
+    {
+        if (_collisioned)
+            m_fColTimer += Time.deltaTime;
+        if (m_fColTimer > 1)
+        {
+            _collisioned = false;
+            m_fColTimer = 0f;
+        }
+    }
 }
