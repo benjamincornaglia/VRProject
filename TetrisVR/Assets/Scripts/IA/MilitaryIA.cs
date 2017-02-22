@@ -10,6 +10,23 @@ public class MilitaryIA : ArmedIA {
 
 	private UnityEngine.AI.NavMeshAgent agent = null;
 
+    void addMeshFilter()
+    {
+        var chunks = transform.FindChild("Frame 1").GetChild(0);
+        MeshFilter[] meshFilters = chunks.GetComponentsInChildren<MeshFilter>();
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+        int i = 0;
+        while (i < meshFilters.Length)
+        {
+            combine[i].mesh = meshFilters[i].sharedMesh;
+            combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+            i++;
+        }
+        MeshFilter filter = gameObject.AddComponent<MeshFilter>();
+        filter.mesh = new Mesh();
+        filter.mesh.CombineMeshes(combine);
+    }
+
 	// Use this for initialization
 	void Start () {
 		base.Start();

@@ -416,16 +416,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114546669537042350, guid: ab676db96776ad24094f710100d2bac9,
-        type: 2}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 761254296}
     - target: {fileID: 114866700448310486, guid: ab676db96776ad24094f710100d2bac9,
         type: 2}
       propertyPath: HasDeserialized
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114546669537042350, guid: ab676db96776ad24094f710100d2bac9,
+        type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 761254296}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab676db96776ad24094f710100d2bac9, type: 2}
   m_IsPrefabParent: 0

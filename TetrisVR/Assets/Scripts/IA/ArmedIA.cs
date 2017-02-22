@@ -30,7 +30,7 @@ public class ArmedIA : MonoBehaviour {
 
 	private ParticleSystem particles;
 
-    protected bool alive = true;
+    protected bool alive = false;
 
     protected GameObject CurrentProjectile
     {
