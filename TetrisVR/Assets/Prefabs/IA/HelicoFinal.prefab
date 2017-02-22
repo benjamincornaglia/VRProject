@@ -8731,6 +8731,7 @@ GameObject:
   - component: {fileID: 114182986424366956}
   - component: {fileID: 54799882421909304}
   - component: {fileID: 65418138300464932}
+  - component: {fileID: 114340996425263650}
   m_Layer: 0
   m_Name: HelicoFinal
   m_TagString: PicaVoxelVolume
@@ -18698,7 +18699,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712441964650982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1625, y: 51.1, z: 1644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -48848,7 +48849,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_Helicopter3Copter.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -1101744
+  thisInstanceId: -1416366
   Undone: 1
 --- !u!114 &114055677196987220
 MonoBehaviour:
@@ -50480,7 +50481,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CARS/Car_Helicopter3Helices.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -1102004
+  thisInstanceId: -1416626
   Undone: 1
 --- !u!114 &114229742542573778
 MonoBehaviour:
@@ -51322,6 +51323,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsUpdated: 0
+--- !u!114 &114340996425263650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712441964650982}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0c54c083335444a993e4ce9b142dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useNormal: 0
+  glowMode: 2
+  flashing: 0
+  flashSpeed: 1
+  noOcclusion: 0
+  scaleGlow: 1
+  glowIntensity: 0.5
+  glowOpacity: 2
+  glowColor: {r: 0.86764705, g: 0.5205882, b: 0, a: 1}
+  labelToDisplay: 
+  labelMode: 0
+  labelColor: {r: 1, g: 1, b: 1, a: 1}
+  outlined: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  textFont: {fileID: 0}
+  fontSize: 12
 --- !u!114 &114342331981243062
 MonoBehaviour:
   m_ObjectHideFlags: 1

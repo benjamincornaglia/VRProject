@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 195597217997895204}
   - component: {fileID: 54865839493619100}
   - component: {fileID: 114209600114458418}
+  - component: {fileID: 65906014890384292}
+  - component: {fileID: 114017374139093378}
   m_Layer: 0
   m_Name: millitaire1
   m_TagString: PicaVoxelVolume
@@ -273,6 +275,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 12, z: 8}
   m_Center: {x: 4, y: 6, z: 4}
+--- !u!65 &65906014890384292
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198403965201292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.38, y: 12.54, z: 8.13}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114017374139093378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198403965201292}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0c54c083335444a993e4ce9b142dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useNormal: 0
+  glowMode: 2
+  flashing: 0
+  flashSpeed: 1
+  noOcclusion: 0
+  scaleGlow: 1
+  glowIntensity: 0.5
+  glowOpacity: 2
+  glowColor: {r: 0.86764705, g: 0.5205882, b: 0, a: 1}
+  labelToDisplay: 
+  labelMode: 0
+  labelColor: {r: 1, g: 1, b: 1, a: 1}
+  outlined: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  textFont: {fileID: 0}
+  fontSize: 12
 --- !u!114 &114126394537706286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,7 +438,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/Users/T0179626/Documents/Mes Outils Personnels/VRProject/TetrisVR/Assets/RAWDATA/CHARACTERS/char_Military1.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: -1091900
+  thisInstanceId: -1406520
   Undone: 1
 --- !u!195 &195597217997895204
 NavMeshAgent:

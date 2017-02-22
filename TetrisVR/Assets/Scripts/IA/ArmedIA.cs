@@ -36,7 +36,33 @@ public class ArmedIA : MonoBehaviour {
     {
         get;
         private set;
-    } 
+    }
+
+    bool meshFilterAdded = false;
+
+    bool addMeshFilter()
+    {
+        var chunks = transform.FindChild("Frame 1").GetChild(0);
+        MeshFilter[] meshFilters = chunks.GetComponentsInChildren<MeshFilter>();
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+        int i = 0;
+        while (i < meshFilters.Length)
+        {
+            if (meshFilters[i].mesh == null)
+            {
+                print("test");
+                return false;
+            }
+            combine[i].mesh = meshFilters[i].mesh;
+            combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+            i++;
+        }
+        MeshFilter filter = gameObject.AddComponent<MeshFilter>();
+        filter.mesh = new Mesh();
+        filter.mesh.CombineMeshes(combine);
+        GetComponent<shaderGlow>().enabled = true;
+        return true;
+    }
 
     private void createProjectilePool() {
 		for (int i=0; i<ProjectilePoolSize; i++) {
@@ -96,6 +122,11 @@ public class ArmedIA : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Update () {
+        if (!meshFilterAdded)
+        {
+            meshFilterAdded = addMeshFilter();
+        }
+
         if (!alive)
         {
             return;
