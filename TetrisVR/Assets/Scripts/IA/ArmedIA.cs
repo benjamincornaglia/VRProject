@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmedIA : MonoBehaviour {
+public class ArmedIA : IA {
 
 	[Range(5.0f, 500.0f)]
 	public float FireDistance = 100.0f;
@@ -18,7 +18,7 @@ public class ArmedIA : MonoBehaviour {
 	[Range(1, 10)]
 	public int ProjectilePoolSize = 1;
 
-	private ObjectPool projectilePool = new ObjectPool();
+	private ObjectPool projectilePool;
 
 	private bool weaponAlternance;
 
@@ -29,8 +29,6 @@ public class ArmedIA : MonoBehaviour {
 	public ParticleSystem Particles;
 
 	private ParticleSystem particles;
-
-    protected bool alive = false;
 
     protected GameObject CurrentProjectile
     {
@@ -63,14 +61,6 @@ public class ArmedIA : MonoBehaviour {
         GetComponent<shaderGlow>().enabled = true;
         return true;
     }
-
-    private void createProjectilePool() {
-		for (int i=0; i<ProjectilePoolSize; i++) {
-			var proj = Instantiate (Projectile);
-			proj.SetActive (false);
-			projectilePool.AddObject(proj);
-		}
-	}
 
     private bool facingTarget() {
         Vector3 vectorToTarget = Target.transform.position - this.transform.position;
@@ -109,7 +99,6 @@ public class ArmedIA : MonoBehaviour {
 			throw new UnityException ("ArmedIA : WeaponPosition1 have to be assigned");
 		}
 
-		createProjectilePool();
 		nextFire = FireInterval;
 
 		if (Particles == null) {
@@ -118,13 +107,19 @@ public class ArmedIA : MonoBehaviour {
 
 		particles = Instantiate(Particles) as ParticleSystem;
 		particles.Stop();
+
+        if (Projectile == null) {
+            throw new UnityException("ArmedIA : Projectile have to be assigned.");
+        }
+
+        projectilePool = new ObjectPool(Projectile, ProjectilePoolSize);
 	}
 	
 	// Update is called once per frame
 	public void Update () {
         if (!meshFilterAdded)
         {
-            meshFilterAdded = addMeshFilter();
+            //meshFilterAdded = addMeshFilter();
         }
 
         if (!alive)

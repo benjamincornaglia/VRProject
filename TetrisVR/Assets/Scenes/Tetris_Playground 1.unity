@@ -1453,7 +1453,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 214314
+  thisInstanceId: 322236
   Undone: 0
 --- !u!4 &20639792
 Transform:
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 214360
+  thisInstanceId: 322282
   Undone: 0
 --- !u!4 &24403298
 Transform:
@@ -3317,7 +3317,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 214526
+  thisInstanceId: 322448
   Undone: 0
 --- !u!4 &45966353
 Transform:
@@ -6137,7 +6137,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 214856
+  thisInstanceId: 322778
   Undone: 0
 --- !u!4 &87952033
 Transform:
@@ -6481,50 +6481,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 23653586259000114, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 1000518451}
     - target: {fileID: 33901138117618714, guid: 232990c9df5dde044bc2982dfdbb7c23,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 883661694}
-    - target: {fileID: 224317829165951222, guid: 232990c9df5dde044bc2982dfdbb7c23,
+    - target: {fileID: 23653586259000114, guid: 232990c9df5dde044bc2982dfdbb7c23,
         type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224317829165951222, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224726427531972358, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224726427531972358, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224726427531972358, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 136925254284373878, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060130919121094, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1000518451}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
   m_IsPrefabParent: 0
@@ -8681,7 +8647,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 215156
+  thisInstanceId: 323078
   Undone: 0
 --- !u!4 &129184360
 Transform:
@@ -10046,7 +10012,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 215312
+  thisInstanceId: 323234
   Undone: 0
 --- !u!4 &150412893
 Transform:
@@ -10817,7 +10783,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 215400
+  thisInstanceId: 323322
   Undone: 0
 --- !u!4 &162835540
 Transform:
@@ -11355,7 +11321,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 215458
+  thisInstanceId: 323380
   Undone: 0
 --- !u!4 &166918181
 Transform:
@@ -12762,7 +12728,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 215622
+  thisInstanceId: 323544
   Undone: 0
 --- !u!4 &195164980
 Transform:
@@ -21201,7 +21167,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 216664
+  thisInstanceId: 324586
   Undone: 0
 --- !u!4 &337521016
 Transform:
@@ -22315,7 +22281,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 216788
+  thisInstanceId: 324710
   Undone: 0
 --- !u!4 &356236983
 Transform:
@@ -27156,7 +27122,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 217380
+  thisInstanceId: 325302
   Undone: 1
 --- !u!4 &453362903
 Transform:
@@ -31433,7 +31399,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 217904
+  thisInstanceId: 325826
   Undone: 0
 --- !u!4 &536351489
 Transform:
@@ -33020,7 +32986,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 218090
+  thisInstanceId: 326012
   Undone: 1
 --- !u!4 &565305883
 Transform:
@@ -35621,7 +35587,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 218394
+  thisInstanceId: 326316
   Undone: 1
 --- !u!4 &606256665
 Transform:
@@ -35775,7 +35741,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 218404
+  thisInstanceId: 326326
   Undone: 1
 --- !u!4 &606497216
 Transform:
@@ -39712,7 +39678,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 218876
+  thisInstanceId: 326802
   Undone: 0
 --- !u!4 &683190446
 Transform:
@@ -40824,10 +40790,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1097240977214464, guid: 8785e1896a4286b45bb3a7442667ea9f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8785e1896a4286b45bb3a7442667ea9f, type: 2}
   m_IsPrefabParent: 0
@@ -41736,7 +41698,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 219116
+  thisInstanceId: 327042
   Undone: 1
 --- !u!4 &739256701
 Transform:
@@ -43478,7 +43440,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 219322
+  thisInstanceId: 327248
   Undone: 0
 --- !u!4 &762717175
 Transform:
@@ -46558,10 +46520,6 @@ Prefab:
     - target: {fileID: 4290842247026226, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213767721695120, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
@@ -52970,7 +52928,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 220472
+  thisInstanceId: 328398
   Undone: 0
 --- !u!4 &927786234
 Transform:
@@ -57798,7 +57756,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 221064
+  thisInstanceId: 328990
   Undone: 1
 --- !u!4 &1010632028
 Transform:
@@ -69884,7 +69842,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 222200
+  thisInstanceId: 330126
   Undone: 0
 --- !u!4 &1177772963
 Transform:
@@ -72720,7 +72678,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 222530
+  thisInstanceId: 330456
   Undone: 0
 --- !u!4 &1227643320
 Transform:
@@ -77124,7 +77082,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 223068
+  thisInstanceId: 330994
   Undone: 0
 --- !u!4 &1313880862
 Transform:
@@ -78249,7 +78207,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 223196
+  thisInstanceId: 331122
   Undone: 0
 --- !u!4 &1323706729
 Transform:
@@ -80175,7 +80133,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 223422
+  thisInstanceId: 331350
   Undone: 1
 --- !u!4 &1365713142
 Transform:
@@ -81961,7 +81919,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 223636
+  thisInstanceId: 331564
   Undone: 0
 --- !u!4 &1388657469
 Transform:
@@ -82595,7 +82553,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 223706
+  thisInstanceId: 331634
   Undone: 1
 --- !u!4 &1390414132
 Transform:
@@ -89045,7 +89003,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 224504
+  thisInstanceId: 332432
   Undone: 0
 --- !u!4 &1498539715
 Transform:
@@ -93081,7 +93039,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 225002
+  thisInstanceId: 332930
   Undone: 0
 --- !u!4 &1577032081
 Transform:
@@ -93907,7 +93865,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 225096
+  thisInstanceId: 333024
   Undone: 0
 --- !u!4 &1586336552
 Transform:
@@ -95271,7 +95229,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 225254
+  thisInstanceId: 333182
   Undone: 0
 --- !u!4 &1618946295
 Transform:
@@ -98786,7 +98744,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 225682
+  thisInstanceId: 333610
   Undone: 0
 --- !u!4 &1689720036
 Transform:
@@ -103328,7 +103286,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 226232
+  thisInstanceId: 334160
   Undone: 0
 --- !u!4 &1760802451
 Transform:
@@ -105742,7 +105700,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 226522
+  thisInstanceId: 334450
   Undone: 0
 --- !u!4 &1809613361
 Transform:
@@ -107042,7 +107000,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 226676
+  thisInstanceId: 334604
   Undone: 0
 --- !u!4 &1831732890
 Transform:
@@ -108926,7 +108884,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 226902
+  thisInstanceId: 334830
   Undone: 0
 --- !u!4 &1865061938
 Transform:
@@ -116659,7 +116617,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 227854
+  thisInstanceId: 335782
   Undone: 0
 --- !u!4 &1994775971
 Transform:
@@ -121874,7 +121832,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 228490
+  thisInstanceId: 336418
   Undone: 0
 --- !u!4 &2130131404
 Transform:
@@ -122700,7 +122658,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 228584
+  thisInstanceId: 336512
   Undone: 0
 --- !u!4 &2145153163
 Transform:
