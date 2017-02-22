@@ -1,44 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IAHelico : MonoBehaviour {
+public class IAHelico : ArmedIA {
 
-	public GameObject Target;
 	public float Speed = 10.0f;
-	public float FireInterval = 5;
-	public GameObject Projectile;
 
 	public GameObject Helices;
 
-	private float nextFire;
 	private Rigidbody rb;
 
 	float lastDistance = 0;
 
-	private bool alive = true;
-
 	// Use this for initialization
 	void Start () {
-		transform.position = new Vector3 (transform.position.x, Target.transform.position.y + 200f, transform.position.z);
-		nextFire = FireInterval;
+		base.Start();
 		rb = GetComponent<Rigidbody> ();
 	}
 
-	private void shoot(Vector3 targetDirection) {
-		nextFire -= Time.deltaTime;
-		if (nextFire <= 0) {
-			if (Vector3.Distance (transform.position, Target.transform.position) < 250.0f) {
-				var proj = Instantiate (Projectile);
-				proj.transform.position = transform.position;
-				proj.GetComponent<Rigidbody> ().AddForce (targetDirection * 1000.0f);
-			}
-			nextFire = FireInterval;
-		}
-	}
-
 	void Update() {
+        base.Update();
 
-		Helices.transform.Rotate(0, 20, 0);
+        if (alive) {
+            Helices.transform.Rotate(0, 20, 0);
+        }
 	}
 
 	// Update is called once per frame
@@ -48,8 +32,6 @@ public class IAHelico : MonoBehaviour {
 		}
 
 		var targetDirection = (Target.transform.position - transform.position).normalized;
-
-		shoot (targetDirection);
 
 		targetDirection.y = 0;
 		targetDirection.Normalize ();
@@ -82,6 +64,8 @@ public class IAHelico : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		alive = false;
+        if (collision.gameObject != CurrentProjectile) {
+            alive = false;
+        }
 	}
 }
