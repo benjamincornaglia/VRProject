@@ -30,7 +30,15 @@ public class ArmedIA : MonoBehaviour {
 
 	private ParticleSystem particles;
 
-	private void createProjectilePool() {
+    protected bool alive = true;
+
+    protected GameObject CurrentProjectile
+    {
+        get;
+        private set;
+    } 
+
+    private void createProjectilePool() {
 		for (int i=0; i<ProjectilePoolSize; i++) {
 			var proj = Instantiate (Projectile);
 			proj.SetActive (false);
@@ -38,26 +46,35 @@ public class ArmedIA : MonoBehaviour {
 		}
 	}
 
-	private void fire() {
-		var proj = projectilePool.getNext();
-		if (weaponAlternance) {
-			proj.transform.position = WeaponPosition1.transform.position;
-		} else {
-			if (WeaponPosition2 != null) {
-				particles.transform.position = WeaponPosition2.transform.position;
-				proj.transform.position = WeaponPosition2.transform.position;
-			} else {
-				particles.transform.position = WeaponPosition1.transform.position;
-				proj.transform.position = WeaponPosition1.transform.position;
-			}
-		}
-		var rb = proj.GetComponent<Rigidbody> ();
-		if (rb != null) {
-			proj.SetActive (true);
-			rb.AddForce ((Target.transform.position - this.transform.position).normalized * 500.0f);
-		}
-		particles.Play();
-		weaponAlternance = !weaponAlternance;
+    private bool facingTarget() {
+        Vector3 vectorToTarget = Target.transform.position - this.transform.position;
+        vectorToTarget.y = 0;
+        return Vector3.Angle(transform.forward, vectorToTarget) < 10;
+    }
+
+    private void fire() {
+        if (facingTarget()) {
+            var proj = projectilePool.getNext();
+            CurrentProjectile = proj;
+            if (weaponAlternance) {
+                proj.transform.position = WeaponPosition1.transform.position;
+            } else {
+                if (WeaponPosition2 != null) {
+                    particles.transform.position = WeaponPosition2.transform.position;
+                    proj.transform.position = WeaponPosition2.transform.position;
+                } else {
+                    particles.transform.position = WeaponPosition1.transform.position;
+                    proj.transform.position = WeaponPosition1.transform.position;
+                }
+            }
+            var rb = proj.GetComponent<Rigidbody>();
+            if (rb != null) {
+                proj.SetActive(true);
+                rb.AddForce((Target.transform.position - this.transform.position).normalized * 500.0f);
+            }
+            particles.Play();
+            weaponAlternance = !weaponAlternance;
+        }
 	}
 
 	// Use this for initialization
@@ -79,6 +96,11 @@ public class ArmedIA : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Update () {
+        if (!alive)
+        {
+            return;
+        }
+
 		if (Vector3.Distance(this.transform.position, Target.transform.position) < FireDistance) {
 			nextFire -= Time.deltaTime;
 			if (nextFire <= 0.0f) {
@@ -87,6 +109,6 @@ public class ArmedIA : MonoBehaviour {
 			}
 		} else {
 			nextFire = FireInterval;
-		}
+        }
 	}
 }

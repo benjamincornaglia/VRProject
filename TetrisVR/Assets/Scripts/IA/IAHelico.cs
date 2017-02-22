@@ -11,8 +11,6 @@ public class IAHelico : ArmedIA {
 
 	float lastDistance = 0;
 
-	private bool alive = true;
-
 	// Use this for initialization
 	void Start () {
 		base.Start();
@@ -20,8 +18,11 @@ public class IAHelico : ArmedIA {
 	}
 
 	void Update() {
-		Helices.transform.Rotate(0, 20, 0);
-		base.Update();
+        base.Update();
+
+        if (alive) {
+            Helices.transform.Rotate(0, 20, 0);
+        }
 	}
 
 	// Update is called once per frame
@@ -63,6 +64,8 @@ public class IAHelico : ArmedIA {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		alive = false;
+        if (collision.gameObject != CurrentProjectile) {
+            alive = false;
+        }
 	}
 }
