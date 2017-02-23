@@ -108,3 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pMyController: {fileID: 0}
+  m_ePlayMode: 1

@@ -188,6 +188,7 @@ public class Manipulation : MonoBehaviour {
             {
                 m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
                 m_pObject.GetComponent<Destruction>().m_bGrabbed = true;
+                m_pObject.GetComponent<Destruction>().m_bCanScore = true;
             }
         }
         if (Input.GetMouseButtonUp(0) && m_pObject != null)

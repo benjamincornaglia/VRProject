@@ -7,10 +7,25 @@ public class InitializeScoreTxt : MonoBehaviour {
 
     float m_fLifeTime = 0;
     public GameObject m_pMyController;
-	void Awake()
+
+    enum PlayMode { VR, Debug };
+    [SerializeField]
+    PlayMode m_ePlayMode;
+
+    void Awake()
 	{
-		m_pMyController = GameObject.Find ("Ears");
-	}
+		
+
+        switch (m_ePlayMode)
+        {
+            case PlayMode.Debug:
+                m_pMyController = GameObject.Find("CharacterController");     
+                break;
+            case PlayMode.VR:
+                m_pMyController = GameObject.Find("Ears");
+                break;
+        }
+    }
 
 	// Use this for initialization
 	void Start () {

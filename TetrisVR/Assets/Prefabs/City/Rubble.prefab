@@ -789,6 +789,7 @@ MonoBehaviour:
   m_bGrabbed: 0
   _themanager: {fileID: 0}
   m_bCanScore: 0
+  m_ePlayMode: 1
 --- !u!114 &114483161794575486
 MonoBehaviour:
   m_ObjectHideFlags: 1

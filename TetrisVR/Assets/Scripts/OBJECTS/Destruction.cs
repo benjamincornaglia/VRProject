@@ -33,10 +33,24 @@ public class Destruction : MonoBehaviour {
 
 	public bool m_bCanScore = false;
 
+    enum PlayMode { VR, Debug };
+    [SerializeField]
+    PlayMode m_ePlayMode;
+
     // Use this for initialization
     void Start () {
         m_pExploder = this.GetComponent<Exploder>();
-		_themanager = GameObject.Find ("VRController").GetComponent<ScoreManager>();
+
+        switch (m_ePlayMode)
+        {
+            case PlayMode.Debug:
+                _themanager = GameObject.Find("CharacterController").GetComponent<ScoreManager>();
+                break;
+            case PlayMode.VR:
+                _themanager = GameObject.Find("VRController").GetComponent<ScoreManager>();
+                break;
+        }
+        
 	}
 	
 	// Update is called once per frame
@@ -156,6 +170,8 @@ public class Destruction : MonoBehaviour {
                 {
                     _collisioned = true;
                     _themanager.swipeHappen(collision.contacts[0].point);
+                    transform.GetChild(1).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
+                    transform.GetChild(1).GetComponent<AudioSource>().Play();
                 }
                 
                 //Debug.Log ("Relative Velo = " + collision.relativeVelocity.magnitude * 1000f);
@@ -166,7 +182,8 @@ public class Destruction : MonoBehaviour {
         {
             if (fDiff > m_fDestructionThreshold && m_bCanScore)
             {
-                
+                if(!m_bGrabbed)
+                    m_bCanScore = false;
                 float fExplosionRadius = fDiff;
                 //float fExplosionRadius = Random.Range(2, 10);
                 m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 1, m_fMaxExplosionRadius);
@@ -193,7 +210,7 @@ public class Destruction : MonoBehaviour {
                 {
                     _collisioned = true;
                     _themanager.swipeHappen(collision.contacts[0].point);
-                    transform.GetChild(0).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
+                    transform.GetChild(1).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
                     transform.GetChild(1).GetComponent<AudioSource>().Play();
                 }
             }
