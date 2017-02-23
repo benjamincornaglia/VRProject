@@ -22,6 +22,13 @@ public class MilitaryIA : ArmedIA {
 	void Update () {
 		base.Update();
 		
+		if (!alive) {
+			agent.enabled = false;
+			return;
+		}
+			
+		agent.enabled = true;
+
 		if (Vector3.Distance(lastTargetPosition, Target.transform.position) > UpdateDistance) {
 			lastTargetPosition = Target.transform.position;
             agent.destination = new Vector3(Target.transform.position.x, 0, Target.transform.position.z);
