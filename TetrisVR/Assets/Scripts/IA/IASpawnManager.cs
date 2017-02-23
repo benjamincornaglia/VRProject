@@ -68,7 +68,7 @@ public class IASpawnManager : MonoBehaviour {
 	}
 	
 	bool spawnHelico() {
-		Vector3 spawnPosition =
+        Vector3 spawnPosition =
 			Target.transform.position - (camera.transform.forward * 500) + new Vector3(0, 200, 0);
 
 		return spawnObject(spawnPosition, helicoPool);
@@ -90,11 +90,11 @@ public class IASpawnManager : MonoBehaviour {
 			return false;
 		}
 
-		return spawnObject(spawner.transform.position, tankPool);
+		return spawnObject(spawner.transform.position, pool);
 	}
 
 	bool spawnTank() {
-		return spawnNavMeshGuided(tankPool);
+        return spawnNavMeshGuided(tankPool);
 	}
 
 	bool spawnMilitary() {
@@ -103,9 +103,10 @@ public class IASpawnManager : MonoBehaviour {
 
 	void spawnRandom() {
 		int type = Random.Range(0, 10);
+        print(type);
 		if (type == 0) {
 			spawnHelico();
-		} else if (type < 5) {
+		} else if (type < 3) {
 			spawnTank();
 		} else {
 			spawnMilitary();

@@ -30257,7 +30257,7 @@ MonoBehaviour:
   MeshingMode: 1
   MeshColliderMeshingMode: 0
   GenerateMeshColliderSeparately: 0
-  Material: {fileID: 2100000, guid: b4d0247e277c239499df6080cf765f3c, type: 2}
+  Material: {fileID: 2100000, guid: d737ea0d2704561458ddfca44a4931c4, type: 2}
   PhysicMaterial: {fileID: 0}
   CollisionTrigger: 0
   CollisionMode: 1
