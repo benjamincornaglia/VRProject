@@ -6,7 +6,7 @@ using Valve.VR;
 public class Manipulation : MonoBehaviour {
 
     public GameObject m_pObject;
-    public static bool m_bHasObject;
+    public bool m_bHasObject;
 
 	const int nbRegisteredLastPosition = 2;
     
@@ -31,6 +31,7 @@ public class Manipulation : MonoBehaviour {
 
     GameObject m_pMyController;
     GameObject m_pBloodParticles;
+	GameObject m_pMouth;
 
     enum PlayMode { VR, Debug };
     [SerializeField]
@@ -38,6 +39,7 @@ public class Manipulation : MonoBehaviour {
 
     void Start () 
 	{
+		m_pMouth = GameObject.Find ("Mouth");
         m_pLineRenderer = GetComponent<LineRenderer>();
         switch (m_ePlayMode)
         {
@@ -110,7 +112,7 @@ public class Manipulation : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, fwd, out hit, 100))
         {
-            if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.GetComponent<ArmedIA>() != null) && m_pObject == null)
+			if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.GetComponent<ArmedIA>() != null ||hit.collider.gameObject.tag == "PicaVoxelVolume") && m_pObject == null)
             {
                 m_pObject = hit.collider.gameObject;
                 if(m_pObject.GetComponent<shaderGlow>() != null)              
@@ -143,7 +145,7 @@ public class Manipulation : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, m_pObject.transform.position) > m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward*2f, Time.deltaTime * m_fVacuumSpeed);
+				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward * 5f + transform.up * -5, Time.deltaTime * m_fVacuumSpeed);
 				m_pObject.transform.rotation = Quaternion.Lerp(m_pObject.transform.rotation, transform.rotation, Time.deltaTime * 2f);
 
                 if (device != null)
@@ -151,7 +153,7 @@ public class Manipulation : MonoBehaviour {
             }
             else if (Vector3.Distance(transform.position, m_pObject.transform.position) <= m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = transform.position + transform.forward*2f;
+				m_pObject.transform.position = transform.position + transform.forward*5f + transform.up * -5;
 				m_pObject.transform.rotation = transform.rotation;
 
                 if (device != null)
@@ -211,35 +213,31 @@ public class Manipulation : MonoBehaviour {
                 {
                     m_pObject.GetComponent<Destruction>().m_bCanSpawnRubbles = true;
                     m_pObject.GetComponent<Destruction>().m_bGrabbed = true;
+					m_pObject.GetComponent<Destruction>().m_bCanScore = true;
                 }
+				m_pMouth.GetComponent<Eat> ().m_pUsedCtrl = this.gameObject;
 			} 
-            if (device.GetPressUp(triggerButton) && m_pObject != null)
+            if (device.GetPressUp(triggerButton))
             {
 				Debug.Log ("Pressed trigger up");
                 m_bHasObject = false;
-                m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                m_pObject.GetComponent<Rigidbody>().useGravity = true;
-                if (m_pObject.GetComponent<Destruction>())
-                    m_pObject.GetComponent<Destruction>().m_bGrabbed = false;
-                if (!m_bHasObject)
-                {
-                    m_pObject.GetComponent<Rigidbody>().AddForce(velocityFromLastPositions() * 500, ForceMode.Impulse);
-                }
+				if (m_pObject != null) {
+					m_pObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+					m_pObject.GetComponent<Rigidbody>().useGravity = true;
+					if (m_pObject.GetComponent<Destruction>())
+						m_pObject.GetComponent<Destruction>().m_bGrabbed = false;
+					if (!m_bHasObject)
+					{
+						m_pObject.GetComponent<Rigidbody>().AddForce(velocityFromLastPositions() * 500, ForceMode.Impulse);
+					}
+					m_pMouth.GetComponent<Eat> ().m_pUsedCtrl = null;
+				}
+                
             }
 
 			
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Comestible")
-        {
-            m_pMyController.GetComponent<HealthManager>().HealthInput(m_fHealthRestoredPerComestible);
-            m_pBloodParticles.GetComponent<ParticleSystem>().Play();
-            GameObject.Destroy(other.gameObject);
-            m_bHasObject = false;
-            Debug.Log("Health Up");
-        }
-    }
+    
 }

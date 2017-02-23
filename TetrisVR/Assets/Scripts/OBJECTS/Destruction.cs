@@ -16,7 +16,7 @@ public class Destruction : MonoBehaviour {
 
     bool m_bHasSpawnedRubble = false;
     float m_fSpawnRubbleTimer = 0f;
-    public float m_fSpawnTimer = 2f;
+    public float m_fSpawnTimer = 10f;
     public int m_iRubbleStacks = 3;
 
     public bool m_bCanSpawnRubbles = false;
@@ -31,9 +31,12 @@ public class Destruction : MonoBehaviour {
     private bool _collisioned = false;
     float m_fColTimer = 0f;
 
+	public bool m_bCanScore = false;
+
     // Use this for initialization
     void Start () {
         m_pExploder = this.GetComponent<Exploder>();
+		_themanager = GameObject.Find ("VRController").GetComponent<ScoreManager>();
 	}
 	
 	// Update is called once per frame
@@ -68,24 +71,34 @@ public class Destruction : MonoBehaviour {
     void RandomRubbleSpawn(Vector3 _vPos)
     {
         
-        int i = Random.Range(0, 100);
-        if(i >= 50)
+        int i = Random.Range(0, 1000);
+        if(i >= 950)
         {
-            if(!m_bHasSpawnedRubble && m_bCanSpawnRubbles)
-            {
-                //for(int index = 0; index <= m_iRubbleStacks; i++)
-                //{
-                    GameObject pRubble = GameObject.Instantiate(m_pRubble, _vPos, new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
-                    pRubble.transform.localScale = new Vector3(Random.Range(1, 3), Random.Range(1, 3), Random.Range(1, 3));
-                    m_bHasSpawnedRubble = true;
-                    pRubble.GetComponent<Destruction>().m_bCanSpawnRubbles = false;
-                    pRubble.GetComponent<shaderGlow>().lightOff();
-                    pRubble.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    pRubble.GetComponent<Rigidbody>().useGravity = true;
-                //}
+			if (!m_bHasSpawnedRubble && m_bCanSpawnRubbles && this.gameObject.tag == "Piece") {
+				//for(int index = 0; index <= m_iRubbleStacks; i++)
+				//{
+				GameObject pRubble = GameObject.Instantiate (m_pRubble, _vPos, new Quaternion (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360)));
+				pRubble.transform.localScale = new Vector3 (Random.Range (1, 3), Random.Range (1, 3), Random.Range (1, 3));
+				m_bHasSpawnedRubble = true;
+				pRubble.GetComponent<Destruction> ().m_bCanSpawnRubbles = false;
+				//pRubble.GetComponent<shaderGlow>().lightOff();
+				pRubble.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+				pRubble.GetComponent<Rigidbody> ().useGravity = true;
+				//}
                 
-                Debug.Log("Rubble Spawn");
-            }
+
+			} else if(m_bCanSpawnRubbles && this.gameObject.tag == "Destructor"){
+			
+				GameObject pRubble = GameObject.Instantiate (m_pRubble, _vPos, new Quaternion (Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360), Random.Range (0, 360)));
+				pRubble.transform.localScale = new Vector3 (Random.Range (1, 3), Random.Range (1, 3), Random.Range (1, 3));
+				m_bHasSpawnedRubble = true;
+				pRubble.GetComponent<Destruction> ().m_bCanSpawnRubbles = false;
+				//pRubble.GetComponent<shaderGlow>().lightOff();
+				pRubble.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+				pRubble.GetComponent<Rigidbody> ().useGravity = true;
+
+				Debug.Log ("Rubble Spawn");
+			}
         }
     }
 
@@ -126,7 +139,7 @@ public class Destruction : MonoBehaviour {
             {
                 //float fExplosionRadius = collision.relativeVelocity.magnitude * 1000f;
                 float fExplosionRadius = fDiff;
-                m_pExploder.ExplosionRadius = Mathf.Clamp(Mathf.Round(fExplosionRadius), 1, m_fMaxExplosionRadius);
+				m_pExploder.ExplosionRadius = Random.Range(5,8);
                 m_pExploder.Explode();
                 if (GetComponent<AudioSource>() != null)
                 {
@@ -151,7 +164,7 @@ public class Destruction : MonoBehaviour {
         }
         else if(this.gameObject.tag == "Piece" && collision.gameObject.tag == "PicaVoxelVolume")
         {
-            if (fDiff > m_fDestructionThreshold)
+            if (fDiff > m_fDestructionThreshold && m_bCanScore)
             {
                 
                 float fExplosionRadius = fDiff;
@@ -169,14 +182,14 @@ public class Destruction : MonoBehaviour {
                     }
                 }
                 RandomRubbleSpawn(collision.contacts[0].point);
-                if(!Manipulation.m_bHasObject && !_collisioned)
+				if(!m_bGrabbed && !_collisioned)
                 {
                     _collisioned = true;
                     _themanager.throwhappen(collision.contacts[0].point);
                     transform.GetChild(0).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
                     transform.GetChild(0).GetComponent<AudioSource>().Play();
                 }
-                else if(Manipulation.m_bHasObject && !_collisioned)
+                else if(m_bGrabbed && !_collisioned)
                 {
                     _collisioned = true;
                     _themanager.swipeHappen(collision.contacts[0].point);

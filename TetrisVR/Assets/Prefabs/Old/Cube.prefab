@@ -427,7 +427,7 @@ MonoBehaviour:
   m_fMaxExplosionRadius: 5
   m_fDestructionThreshold: 0
   m_pClip: {fileID: 0}
-  m_pRubble: {fileID: 1981709498550210}
+  m_pRubble: {fileID: 1958799573274718, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
   m_fSpawnTimer: 2
   m_iRubbleStacks: 3
   m_bCanSpawnRubbles: 0
