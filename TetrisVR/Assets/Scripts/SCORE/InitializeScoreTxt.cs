@@ -6,12 +6,16 @@ using DG.Tweening;
 public class InitializeScoreTxt : MonoBehaviour {
 
     float m_fLifeTime = 0;
-    GameObject m_pMyController;
+    public GameObject m_pMyController;
+	void Awake()
+	{
+		m_pMyController = GameObject.Find ("Ears");
+	}
 
 	// Use this for initialization
 	void Start () {
 
-        m_pMyController = GameObject.FindGameObjectWithTag("Player");
+        
         transform.DOScale(new Vector3(-1.5f, 1.5f, -1.5f), 0.5f).SetEase(Ease.OutBack);
         transform.DOMove(transform.position + transform.up,1f);
 
@@ -19,11 +23,14 @@ public class InitializeScoreTxt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		transform.LookAt(m_pMyController.transform);
+
         m_fLifeTime += Time.deltaTime;
         if (m_fLifeTime > 1)
             Destroy(this.gameObject);
 
-        transform.LookAt(m_pMyController.transform);
+        
 
 	}
 

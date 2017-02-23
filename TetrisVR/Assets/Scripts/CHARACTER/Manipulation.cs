@@ -6,7 +6,7 @@ using Valve.VR;
 public class Manipulation : MonoBehaviour {
 
     public GameObject m_pObject;
-    public static bool m_bHasObject;
+    bool m_bHasObject;
 
 	const int nbRegisteredLastPosition = 2;
     
@@ -143,7 +143,7 @@ public class Manipulation : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, m_pObject.transform.position) > m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward*2f, Time.deltaTime * m_fVacuumSpeed);
+				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward * 5f + transform.up * -5, Time.deltaTime * m_fVacuumSpeed);
 				m_pObject.transform.rotation = Quaternion.Lerp(m_pObject.transform.rotation, transform.rotation, Time.deltaTime * 2f);
 
                 if (device != null)
@@ -151,7 +151,7 @@ public class Manipulation : MonoBehaviour {
             }
             else if (Vector3.Distance(transform.position, m_pObject.transform.position) <= m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = transform.position + transform.forward*2f;
+				m_pObject.transform.position = transform.position + transform.forward*5f + transform.up * -5;
 				m_pObject.transform.rotation = transform.rotation;
 
                 if (device != null)

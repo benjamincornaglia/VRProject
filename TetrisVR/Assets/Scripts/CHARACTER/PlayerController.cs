@@ -314,8 +314,10 @@ public class PlayerController : MonoBehaviour
                     m_pEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pEnergyBar.transform.localScale.y, m_pEnergyBar.transform.localScale.z);
                 break;
             case PlayMode.VR:
-                m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
-                m_pRightEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pRightEnergyBar.transform.localScale.y, m_pRightEnergyBar.transform.localScale.z);
+				if(m_pLeftEnergyBar)  
+                	m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
+				if(m_pRightEnergyBar)    
+					m_pRightEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pRightEnergyBar.transform.localScale.y, m_pRightEnergyBar.transform.localScale.z);
                 break;
         }
         

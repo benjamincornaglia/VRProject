@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour {
 	public float _bonustime;
     public GameObject m_pTxtPrefab;
     public float m_fSpawnDistance = 50f;
+	public GameObject m_pCam;
 
 	private void increaseScore(int val) {
 		_score += val * _bonuscombo;
@@ -22,31 +23,31 @@ public class ScoreManager : MonoBehaviour {
 
 		if (_swipecounter < 5) {
 			increaseScore(100);
-            SpawnScoreText(100, transform.position + transform.forward * m_fSpawnDistance);
+			SpawnScoreText(100, m_pCam.transform.position + m_pCam.transform.forward * m_fSpawnDistance);
 		} 
 
 		else if (_swipecounter < 8) 
 		{
 			increaseScore(80);
-            SpawnScoreText(80, transform.position + transform.forward * m_fSpawnDistance);
+			SpawnScoreText(80, m_pCam.transform.position + m_pCam.transform.forward * m_fSpawnDistance);
         }
 
 		else if (_swipecounter < 11) 
 		{
 			increaseScore(50);
-            SpawnScoreText(50, transform.position + transform.forward * m_fSpawnDistance);
+			SpawnScoreText(50, m_pCam.transform.position + m_pCam.transform.forward * m_fSpawnDistance);
         }
 
 		else if (_swipecounter < 13) 
 		{
             increaseScore(20);
-            SpawnScoreText(20, transform.position + transform.forward * m_fSpawnDistance);
+			SpawnScoreText(20, m_pCam.transform.position + m_pCam.transform.forward * m_fSpawnDistance);
         }
 
 		else if (_swipecounter > 13) 
 		{
 			increaseScore(1);
-            SpawnScoreText(1, transform.position + transform.forward * m_fSpawnDistance);
+			SpawnScoreText(1, m_pCam.transform.position + m_pCam.transform.forward * m_fSpawnDistance);
         }
 	}
 
@@ -62,7 +63,7 @@ public class ScoreManager : MonoBehaviour {
             _bonuscombo += 2;
             SpawnBonusText(2, _vPos);
         } 
-			
+		_swipecounter = 0;
 	}
 
 	// Use this for initialization
@@ -87,13 +88,19 @@ public class ScoreManager : MonoBehaviour {
 
     void SpawnScoreText(int _iValue, Vector3 _vPos)
     {
-        GameObject pTxt = GameObject.Instantiate(m_pTxtPrefab, _vPos, Quaternion.identity);
+		GameObject pTxt = null;
+		if(pTxt == null)
+			pTxt = GameObject.Instantiate(m_pTxtPrefab, _vPos, Quaternion.identity) as GameObject;
         pTxt.GetComponent<InitializeScoreTxt>().SetTxt(_iValue, "+" + _iValue.ToString());
+		//pTxt.GetComponent<InitializeScoreTxt> ().m_pMyController = this.gameObject;
     }
 
     void SpawnBonusText(int _iValue, Vector3 _vPos)
     {
-        GameObject pTxt = GameObject.Instantiate(m_pTxtPrefab, _vPos, Quaternion.identity);
+		GameObject pTxt = null;
+		if(pTxt == null)
+			pTxt = GameObject.Instantiate(m_pTxtPrefab, _vPos, Quaternion.identity) as GameObject;
         pTxt.GetComponent<InitializeScoreTxt>().SetTxt(_iValue, "Bonus X" + _iValue.ToString());
+		//pTxt.GetComponent<InitializeScoreTxt> ().m_pMyController = this.gameObject;
     }
 }
