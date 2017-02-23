@@ -112,7 +112,7 @@ public class Manipulation : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, fwd, out hit, 100))
         {
-            if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.GetComponent<ArmedIA>() != null) && m_pObject == null)
+			if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.GetComponent<ArmedIA>() != null ||hit.collider.gameObject.tag == "PicaVoxelVolume") && m_pObject == null)
             {
                 m_pObject = hit.collider.gameObject;
                 if(m_pObject.GetComponent<shaderGlow>() != null)              
