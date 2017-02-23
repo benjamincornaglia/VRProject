@@ -1453,7 +1453,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 322236
+  thisInstanceId: 30502
   Undone: 0
 --- !u!4 &20639792
 Transform:
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 322282
+  thisInstanceId: 30548
   Undone: 0
 --- !u!4 &24403298
 Transform:
@@ -2127,6 +2127,18 @@ Prefab:
       propertyPath: _themanager
       value: 
       objectReference: {fileID: 610313406}
+    - target: {fileID: 4060159499762000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060159499762000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060159499762000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbd11505f71244649a2bf00cc8d775a6, type: 2}
   m_IsPrefabParent: 0
@@ -3317,7 +3329,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 322448
+  thisInstanceId: 30714
   Undone: 0
 --- !u!4 &45966353
 Transform:
@@ -6137,7 +6149,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 322778
+  thisInstanceId: 31044
   Undone: 0
 --- !u!4 &87952033
 Transform:
@@ -6442,6 +6454,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 92254971}
   m_Mesh: {fileID: 4300000, guid: 9979eba464f32324a86a1fe20c8b4b82, type: 2}
+--- !u!1001 &94374452
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 221.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 68.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &97734277
 Prefab:
   m_ObjectHideFlags: 0
@@ -6455,11 +6518,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4382613022728264, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 46.3
       objectReference: {fileID: 0}
     - target: {fileID: 4382613022728264, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.7
+      value: 76.3
       objectReference: {fileID: 0}
     - target: {fileID: 4382613022728264, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6479,18 +6542,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4382613022728264, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 33901138117618714, guid: 232990c9df5dde044bc2982dfdbb7c23,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 883661694}
     - target: {fileID: 23653586259000114, guid: 232990c9df5dde044bc2982dfdbb7c23,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1000518451}
+      objectReference: {fileID: 1847415785}
+    - target: {fileID: 33901138117618714, guid: 232990c9df5dde044bc2982dfdbb7c23,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1462324232}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 232990c9df5dde044bc2982dfdbb7c23, type: 2}
   m_IsPrefabParent: 0
@@ -8647,7 +8710,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 323078
+  thisInstanceId: 31346
   Undone: 0
 --- !u!4 &129184360
 Transform:
@@ -10012,7 +10075,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 323234
+  thisInstanceId: 31502
   Undone: 0
 --- !u!4 &150412893
 Transform:
@@ -10783,7 +10846,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 323322
+  thisInstanceId: 31590
   Undone: 0
 --- !u!4 &162835540
 Transform:
@@ -11321,7 +11384,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 323380
+  thisInstanceId: 31648
   Undone: 0
 --- !u!4 &166918181
 Transform:
@@ -12728,7 +12791,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 323544
+  thisInstanceId: 31812
   Undone: 0
 --- !u!4 &195164980
 Transform:
@@ -19332,7 +19395,7 @@ Transform:
   - {fileID: 565305883}
   - {fileID: 129184360}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &306582020
 GameObject:
@@ -21167,7 +21230,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 324586
+  thisInstanceId: 32856
   Undone: 0
 --- !u!4 &337521016
 Transform:
@@ -22281,7 +22344,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 324710
+  thisInstanceId: 32980
   Undone: 0
 --- !u!4 &356236983
 Transform:
@@ -27122,7 +27185,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 325302
+  thisInstanceId: 33572
   Undone: 1
 --- !u!4 &453362903
 Transform:
@@ -27427,6 +27490,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456983805}
   m_Mesh: {fileID: 4300000, guid: c4a2320abb2aa2c459062ae640727188, type: 2}
+--- !u!1001 &457853046
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 239
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 89.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &460524979
 GameObject:
   m_ObjectHideFlags: 0
@@ -31399,7 +31513,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 325826
+  thisInstanceId: 34098
   Undone: 0
 --- !u!4 &536351489
 Transform:
@@ -32986,7 +33100,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 326012
+  thisInstanceId: 34284
   Undone: 1
 --- !u!4 &565305883
 Transform:
@@ -34000,7 +34114,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587731482
 GameObject:
@@ -34137,7 +34251,7 @@ RectTransform:
   m_Children:
   - {fileID: 1277394012}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -34377,6 +34491,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588998906}
   m_Mesh: {fileID: 4300000, guid: 655d94f606939fc44bfc1c5ecd156680, type: 2}
+--- !u!1001 &589030915
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 239
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 48.682472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &592318581
 GameObject:
   m_ObjectHideFlags: 0
@@ -35587,7 +35752,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 326316
+  thisInstanceId: 34590
   Undone: 1
 --- !u!4 &606256665
 Transform:
@@ -35741,7 +35906,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 326326
+  thisInstanceId: 34600
   Undone: 1
 --- !u!4 &606497216
 Transform:
@@ -36083,62 +36248,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4418581212706016, guid: f9e1bf3f16e86dc4c803ba3448fae3b2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114734466393267036, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
-        type: 2}
-      propertyPath: m_fDestructionThreshold
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1961982545357896, guid: f9e1bf3f16e86dc4c803ba3448fae3b2, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114636886439509164, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
-        type: 2}
-      propertyPath: m_fDestructionThreshold
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114636886439509164, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
-        type: 2}
-      propertyPath: m_fSpawnTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114636886439509164, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
-        type: 2}
-      propertyPath: m_bGrabbed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203665635503546, guid: f9e1bf3f16e86dc4c803ba3448fae3b2, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9e1bf3f16e86dc4c803ba3448fae3b2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &610313405 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1203665635503546, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
+--- !u!114 &610313406 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114289807927674900, guid: f9e1bf3f16e86dc4c803ba3448fae3b2,
     type: 2}
   m_PrefabInternal: {fileID: 610313404}
---- !u!114 &610313406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 610313405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c4b0eab4f7503049855bb0e2916a3a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: 0
-  _bonuscombo: 0
-  _swipecounter: 0
-  _bonustime: 0
-  m_pTxtPrefab: {fileID: 1517615334243708, guid: 6faa8e877b75b4d45a3ef5a11c30ab12,
-    type: 2}
-  m_fSpawnDistance: 50
 --- !u!1 &611048791
 GameObject:
   m_ObjectHideFlags: 0
@@ -39253,6 +39377,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669144919}
   m_Mesh: {fileID: 4300000, guid: 0c653444b18986d46af6faca01a49ec7, type: 2}
+--- !u!1001 &669725511
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 210.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 89.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &676121156
 GameObject:
   m_ObjectHideFlags: 0
@@ -39678,7 +39853,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 326802
+  thisInstanceId: 35078
   Undone: 0
 --- !u!4 &683190446
 Transform:
@@ -40788,7 +40963,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4099837026660116, guid: 8785e1896a4286b45bb3a7442667ea9f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097240977214464, guid: 8785e1896a4286b45bb3a7442667ea9f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8785e1896a4286b45bb3a7442667ea9f, type: 2}
@@ -41698,7 +41877,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 327042
+  thisInstanceId: 35318
   Undone: 1
 --- !u!4 &739256701
 Transform:
@@ -43440,7 +43619,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 327248
+  thisInstanceId: 35524
   Undone: 0
 --- !u!4 &762717175
 Transform:
@@ -45089,6 +45268,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 784494357}
   m_Mesh: {fileID: 4300000, guid: 28d21a4949f2ce5428de931b3fa62a0d, type: 2}
+--- !u!1001 &786126654
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 210.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 48.682472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &787686266
 GameObject:
   m_ObjectHideFlags: 0
@@ -46519,7 +46749,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4290842247026226, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213767721695120, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d5665942d1e52047864a0e8ff06eabd, type: 2}
@@ -46812,6 +47046,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807557914}
   m_Mesh: {fileID: 4300000, guid: f177e4ab2dd3bde428db5b5a3c7b6979, type: 2}
+--- !u!1001 &808919501
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 210.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 68.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &810438065 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4060159499762000, guid: cbd11505f71244649a2bf00cc8d775a6,
@@ -49908,134 +50193,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 878127243}
   m_Mesh: {fileID: 4300000, guid: bbbb90afe5dd66e42852f5c36220e2d6, type: 2}
---- !u!43 &883661694
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    firstVertex: 0
-    vertexCount: 8
-    localAABB:
-      m_Center: {x: 0, y: 0.01, z: 0}
-      m_Extent: {x: 1.65, y: 0, z: 1.275}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 13
-    m_VertexCount: 8
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 288
-    _typelessdata: 0000c03f0ad7233c0000903f000000000000803f0000803f0000803f00000000000000000000c03f0ad7233c000090bf000000000000803f0000803f0000803f0000803f000000000000c0bf0ad7233c000090bf000000000000803f0000803f0000803f00000000000000000000c0bf0ad7233c0000903f000000000000803f0000803f0000803f0000803f000000003333d33f0ad7233c3333a33f000000000000803f0000803f00000000000000000000803f3333d33f0ad7233c3333a3bf000000000000803f0000803f000000000000803f0000803f3333d3bf0ad7233c3333a3bf000000000000803f0000803f00000000000000000000803f3333d3bf0ad7233c3333a33f000000000000803f0000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0.01, z: 0}
-    m_Extent: {x: 1.65, y: 0, z: 1.275}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 0
 --- !u!1 &883828380
 GameObject:
   m_ObjectHideFlags: 0
@@ -52928,7 +53085,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 328398
+  thisInstanceId: 36676
   Undone: 0
 --- !u!4 &927786234
 Transform:
@@ -56948,35 +57105,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999435757}
   m_Mesh: {fileID: 4300000, guid: 6167e0ef5ecab2548807259394e9074b, type: 2}
---- !u!21 &1000518451
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1001450822
 GameObject:
   m_ObjectHideFlags: 0
@@ -57756,7 +57884,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 328990
+  thisInstanceId: 37266
   Undone: 1
 --- !u!4 &1010632028
 Transform:
@@ -61669,7 +61797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026267175
 GameObject:
@@ -69842,7 +69970,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 330126
+  thisInstanceId: 38402
   Undone: 0
 --- !u!4 &1177772963
 Transform:
@@ -72678,7 +72806,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 330456
+  thisInstanceId: 38732
   Undone: 0
 --- !u!4 &1227643320
 Transform:
@@ -74027,6 +74155,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249132438}
   m_Mesh: {fileID: 4300000, guid: 8f54efb8892f51a4e8ac36f3ddb9e24c, type: 2}
+--- !u!1001 &1252258484
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 221.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 89.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1254438368
 GameObject:
   m_ObjectHideFlags: 0
@@ -77082,7 +77261,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 330994
+  thisInstanceId: 39272
   Undone: 0
 --- !u!4 &1313880862
 Transform:
@@ -78207,7 +78386,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 331122
+  thisInstanceId: 39400
   Undone: 0
 --- !u!4 &1323706729
 Transform:
@@ -78512,48 +78691,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334019784}
   m_Mesh: {fileID: 4300000, guid: d769030c8ffb33f458e00197c8f9cd89, type: 2}
---- !u!1001 &1335261469
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 203.89207
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 8.465961
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 26.324394
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215954194349484, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6faa8e877b75b4d45a3ef5a11c30ab12, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1336248988
 GameObject:
   m_ObjectHideFlags: 0
@@ -79656,6 +79793,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355291109}
   m_Mesh: {fileID: 4300000, guid: 0783199d2f2bf2c46b9cc8bc004d4c2a, type: 2}
+--- !u!1001 &1357112825
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 221.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 48.682472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1360434831
 GameObject:
   m_ObjectHideFlags: 0
@@ -80133,7 +80321,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 331350
+  thisInstanceId: 39628
   Undone: 1
 --- !u!4 &1365713142
 Transform:
@@ -81919,7 +82107,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 331564
+  thisInstanceId: 39842
   Undone: 0
 --- !u!4 &1388657469
 Transform:
@@ -82553,7 +82741,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_38x65x23_Bottom_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 331634
+  thisInstanceId: 39912
   Undone: 1
 --- !u!4 &1390414132
 Transform:
@@ -87522,6 +87710,134 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461785468}
   m_Mesh: {fileID: 0}
+--- !u!43 &1462324232
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 24
+    topology: 0
+    firstVertex: 0
+    vertexCount: 8
+    localAABB:
+      m_Center: {x: 0, y: 0.01, z: 0}
+      m_Extent: {x: 1.65, y: 0, z: 1.275}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 13
+    m_VertexCount: 8
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 288
+    _typelessdata: 0000c03f0ad7233c0000903f000000000000803f0000803f0000803f00000000000000000000c03f0ad7233c000090bf000000000000803f0000803f0000803f0000803f000000000000c0bf0ad7233c000090bf000000000000803f0000803f0000803f00000000000000000000c0bf0ad7233c0000903f000000000000803f0000803f0000803f0000803f000000003333d33f0ad7233c3333a33f000000000000803f0000803f00000000000000000000803f3333d33f0ad7233c3333a3bf000000000000803f0000803f000000000000803f0000803f3333d3bf0ad7233c3333a3bf000000000000803f0000803f00000000000000000000803f3333d3bf0ad7233c3333a33f000000000000803f0000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0.01, z: 0}
+    m_Extent: {x: 1.65, y: 0, z: 1.275}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
 --- !u!1 &1462703394
 GameObject:
   m_ObjectHideFlags: 0
@@ -88770,6 +89086,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1487560415}
   m_Mesh: {fileID: 4300000, guid: a9953b1c12459f44aa4d62005a33789f, type: 2}
+--- !u!1001 &1491510097
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 88.10866
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10.535946
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754750546686090, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834307318941698, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927193358960194, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82423067490619826, guid: 3ab79c341bed64942b7f1306c348a8db,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1494350225
 GameObject:
   m_ObjectHideFlags: 0
@@ -89003,7 +89374,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 332432
+  thisInstanceId: 40712
   Undone: 0
 --- !u!4 &1498539715
 Transform:
@@ -93039,7 +93410,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 332930
+  thisInstanceId: 41210
   Undone: 0
 --- !u!4 &1577032081
 Transform:
@@ -93865,7 +94236,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 333024
+  thisInstanceId: 41304
   Undone: 0
 --- !u!4 &1586336552
 Transform:
@@ -94708,6 +95079,57 @@ Transform:
   m_Father: {fileID: 1008274831}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1612710921
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 193.11557
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 89.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1614320825
 GameObject:
   m_ObjectHideFlags: 0
@@ -95229,7 +95651,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 333182
+  thisInstanceId: 41464
   Undone: 0
 --- !u!4 &1618946295
 Transform:
@@ -98744,7 +99166,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 333610
+  thisInstanceId: 41892
   Undone: 0
 --- !u!4 &1689720036
 Transform:
@@ -99726,6 +100148,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1705720124}
   m_Mesh: {fileID: 4300000, guid: 7a70c9a9985af0a479bf28c47c747ad6, type: 2}
+--- !u!1001 &1708413741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 193.11557
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 68.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1709511710
 GameObject:
   m_ObjectHideFlags: 0
@@ -103286,7 +103759,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 334160
+  thisInstanceId: 42444
   Undone: 0
 --- !u!4 &1760802451
 Transform:
@@ -103591,6 +104064,53 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763739394}
   m_Mesh: {fileID: 4300000, guid: 7ec0d0b7954102c409fd6a9e31eb8d50, type: 2}
+--- !u!1001 &1766929651
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 193.11557
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 48.682472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1768476373
 GameObject:
   m_ObjectHideFlags: 0
@@ -105700,7 +106220,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 334450
+  thisInstanceId: 42736
   Undone: 0
 --- !u!4 &1809613361
 Transform:
@@ -107000,7 +107520,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 334604
+  thisInstanceId: 42890
   Undone: 0
 --- !u!4 &1831732890
 Transform:
@@ -107785,6 +108305,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1842525961}
   m_Mesh: {fileID: 4300000, guid: 5036345b97bc73e468b29689f9d4a42f, type: 2}
+--- !u!21 &1847415785
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1847646717
 GameObject:
   m_ObjectHideFlags: 0
@@ -108884,7 +109433,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 334830
+  thisInstanceId: 43116
   Undone: 0
 --- !u!4 &1865061938
 Transform:
@@ -116617,7 +117166,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x23_Top_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 335782
+  thisInstanceId: 44068
   Undone: 0
 --- !u!4 &1994775971
 Transform:
@@ -118452,6 +119001,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2041639431}
   m_Mesh: {fileID: 4300000, guid: 5bb16dca64f607c408edca76568c3677, type: 2}
+--- !u!1001 &2046287741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 239
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 68.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138646122711004, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118453717079088, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+      propertyPath: m_Name
+      value: Comestible (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286086840452866, guid: 880949d5a315c84438d44cc7c0b0a588,
+        type: 2}
+      propertyPath: m_ePlayMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 880949d5a315c84438d44cc7c0b0a588, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2050200266
 GameObject:
   m_ObjectHideFlags: 0
@@ -121832,7 +122432,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_C.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 336418
+  thisInstanceId: 44708
   Undone: 0
 --- !u!4 &2130131404
 Transform:
@@ -122658,7 +123258,7 @@ MonoBehaviour:
   ImportedFrom: 1
   ImportedFile: D:/PROJECTS/VRProject/TetrisVR/Assets/RAWDATA/BUILDINGS/Building_Tour_34x62x22_Center_A.vox
   ImportedCutoutColor: {r: 0, g: 0, b: 0, a: 0}
-  thisInstanceId: 336512
+  thisInstanceId: 44802
   Undone: 0
 --- !u!4 &2145153163
 Transform:

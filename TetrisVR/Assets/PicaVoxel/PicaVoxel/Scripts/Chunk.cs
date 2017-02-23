@@ -64,13 +64,13 @@ namespace PicaVoxel
         {
             if (status == ChunkStatus.Ready)
             {
-                //SetMesh();
+                SetMesh();
                 status = ChunkStatus.NoChange;
             }
 
             if (updateColliderNextFrame)
             {
-                //UpdateCollider();
+                UpdateCollider();
             }
         }
 

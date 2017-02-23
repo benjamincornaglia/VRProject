@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
 
     GameObject m_pMyController;
     GameObject m_pEnergyBar;
-    GameObject m_pLeftEnergyBar;
-    GameObject m_pRightEnergyBar;
+    public GameObject m_pLeftEnergyBar;
+    public GameObject m_pRightEnergyBar;
     
 
     float m_fInitialMoveSpeed;
@@ -103,8 +103,7 @@ public class PlayerController : MonoBehaviour
     void InitializePointers()
     {
         m_pEnergyBar = GameObject.Find("EnergyBar");
-        m_pLeftEnergyBar = GameObject.Find("LeftEnergyBar");
-        m_pRightEnergyBar = GameObject.Find("RightEnergyBar");
+       
 
         switch (m_ePlayMode)
         {
@@ -154,6 +153,7 @@ public class PlayerController : MonoBehaviour
 
         EnergyBarBehavior();
         HandleCursor();
+		//m_pMyController.GetComponent<Rigidbody> ().velocity = Vector3.zero;
     }
 
     void HandleCursor()
@@ -314,8 +314,10 @@ public class PlayerController : MonoBehaviour
                     m_pEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pEnergyBar.transform.localScale.y, m_pEnergyBar.transform.localScale.z);
                 break;
             case PlayMode.VR:
-                m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
-                m_pRightEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pRightEnergyBar.transform.localScale.y, m_pRightEnergyBar.transform.localScale.z);
+				if(m_pLeftEnergyBar)  
+                	m_pLeftEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pLeftEnergyBar.transform.localScale.y, m_pLeftEnergyBar.transform.localScale.z);
+				if(m_pRightEnergyBar)    
+					m_pRightEnergyBar.transform.localScale = new Vector3(fEnergyScaling, m_pRightEnergyBar.transform.localScale.y, m_pRightEnergyBar.transform.localScale.z);
                 break;
         }
         
