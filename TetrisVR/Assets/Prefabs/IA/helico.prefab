@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4981203765213640}
   - component: {fileID: 33613525907784894}
   - component: {fileID: 23720451956143552}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684599088743284}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WeaponPosition2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4524332165887830}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: helices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4719784042408262}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WeaponPosition1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 65009617885612940}
   - component: {fileID: 54512635659951536}
   - component: {fileID: 114359937858074602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: helico
   m_TagString: Piece
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4607215922348448}
   - component: {fileID: 33813542452891166}
   - component: {fileID: 23010295691428390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,7 +6,7 @@ public class CivilianSpawnManager : MonoBehaviour {
 
 	public GameObject Target;
 
-	[Range(5, 60)]
+	[Range(1, 60)]
 	public int ObjectPoolSize = 5;
 
 	public GameObject PrefabMan1;
@@ -90,6 +90,7 @@ public class CivilianSpawnManager : MonoBehaviour {
 	void spawnRandom() {
 		int type = Random.Range(0, pools.Length);
 		spawnNavMeshGuided(pools[type]);
+		//spawnNavMeshGuided(pools[0]);
 	}
 
 	// Use this for initialization

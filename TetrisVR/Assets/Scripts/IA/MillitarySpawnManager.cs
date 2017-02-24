@@ -122,7 +122,7 @@ public class MillitarySpawnManager : MonoBehaviour {
 			throw new UnityException("IASpawnManager : Tank prefab has to be assigned.");
 		}
 
-		tankPool = new ObjectPool(PrefabTank, ObjectPoolSize, Target);
+		tankPool = new ObjectPool(PrefabTank, 1, Target);
 
 		if (PrefabMillitary == null) {
 			throw new UnityException("IASpawnManager : Millitary prefab has to be assigned.");

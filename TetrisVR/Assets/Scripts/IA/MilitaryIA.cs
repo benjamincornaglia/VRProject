@@ -31,7 +31,7 @@ public class MilitaryIA : ArmedIA {
 
 		if (Vector3.Distance(lastTargetPosition, Target.transform.position) > UpdateDistance) {
 			lastTargetPosition = Target.transform.position;
-            agent.destination = new Vector3(Target.transform.position.x, 0, Target.transform.position.z);
+            agent.destination = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
 		}
 	}
 }

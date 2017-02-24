@@ -62,17 +62,21 @@ public class CivilianIA : IA {
 		if (pathIndex == -1) {
 			pathIndex = nearestPointIndex();
 			agent.destination = path[pathIndex];
+			print ("setting path " + agent.hasPath +"-" + agent.stoppingDistance);
 		}
 
-		if (agent.pathPending) {
+		if (agent.hasPath && !agent.pathPending) {
 			if (agent.remainingDistance <= agent.stoppingDistance) {
 				pathIndex = (pathIndex + 1) % path.Count;
 				agent.destination = path[pathIndex];
+				/*GameObject o = GameObject.CreatePrimitive (PrimitiveType.Sphere);
+				o.transform.position = agent.destination;
+				o.name = gameObject.name + pathIndex;*/
 			}
-		} else {
+		}/* else {
 			pathIndex = (pathIndex + 1) % path.Count;
 			agent.destination = path[pathIndex];
-		}
+		}*/
 	}
 
 	// Use this for initialization
@@ -90,11 +94,11 @@ public class CivilianIA : IA {
 			
 		agent.enabled = true;
 
-		if (Vector3.Distance(this.transform.position, Target.transform.position) > FleeDistance) {
+		//if (Vector3.Distance(this.transform.position, Target.transform.position) > FleeDistance) {
 			flollowPath();
-		} else {
-			pathIndex = -1;
-			agent.destination = path[farestPointIndex()];
-		}
+		//} else {
+			//pathIndex = -1;
+			//agent.destination = path[farestPointIndex()];
+		//}
 	}
 }

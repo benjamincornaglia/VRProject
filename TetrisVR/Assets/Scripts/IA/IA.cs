@@ -21,7 +21,7 @@ public class IA : MonoBehaviour {
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject != CurrentProjectile && collision.impulse.magnitude > Solidity) {
 			print(collision.impulse.magnitude);
-            alive = false;
+            //alive = false;
         }
 	}
 }
