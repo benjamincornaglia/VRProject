@@ -60,7 +60,7 @@ public class CivilianSpawnManager : MonoBehaviour {
 			return false;
 		}
 
-		spawnPosition.y = 0;
+		//spawnPosition.y = 0;
 
 		obj.transform.position = spawnPosition;
 		obj.SetActive(true);

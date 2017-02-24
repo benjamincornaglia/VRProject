@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2719c5760eb644b45a94b564c2d4924b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Solidity: 5.1
+  Solidity: 385
   FireDistance: 192
   FireInterval: 5
   WeaponPosition1: {fileID: 1651032467722100}

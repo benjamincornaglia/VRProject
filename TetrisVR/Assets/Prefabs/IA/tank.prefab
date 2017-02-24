@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490547377991186}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1964, y: 0, z: 1107}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4661750625754838}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2719c5760eb644b45a94b564c2d4924b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Solidity: 10.3
+  Solidity: 301
   FireDistance: 343
   FireInterval: 5
   WeaponPosition1: {fileID: 1367198466918190}

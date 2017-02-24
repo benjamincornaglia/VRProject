@@ -55,7 +55,7 @@ public class MillitarySpawnManager : MonoBehaviour {
 			return false;
 		}
 
-		spawnPosition.y = 0;
+		//spawnPosition.y = 0;
 		
 		obj.transform.position = spawnPosition;
 		obj.SetActive(true);
@@ -65,7 +65,7 @@ public class MillitarySpawnManager : MonoBehaviour {
 	
 	bool spawnHelico() {
         Vector3 spawnPosition =
-			Target.transform.position - (camera.transform.forward * 500) + new Vector3(0, 200, 0);
+			Target.transform.position - (camera.transform.forward * 500) + new Vector3(0, 400, 0);
 
 		return spawnObject(spawnPosition, helicoPool);
 	}
