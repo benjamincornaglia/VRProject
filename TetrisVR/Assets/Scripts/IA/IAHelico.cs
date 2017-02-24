@@ -62,10 +62,4 @@ public class IAHelico : ArmedIA {
 			rb.AddForce (-Physics.gravity * 5.0f * Time.deltaTime);
 		}
 	}
-
-	void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject != CurrentProjectile) {
-            alive = false;
-        }
-	}
 }

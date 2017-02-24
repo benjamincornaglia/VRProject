@@ -24,6 +24,16 @@ public class ObjectPool {
 		}
 	}
 
+	public ObjectPool(GameObject prefab, int poolSize, GameObject target, List<Vector3> path) {
+		for (int i=0; i<poolSize; i++) {
+			var proj = GameObject.Instantiate (prefab);
+			proj.GetComponent<CivilianIA> ().Target = target;
+			proj.GetComponent<CivilianIA> ().path = path;
+			proj.SetActive (false);
+			addObject(proj);
+		}
+	}
+
 	public void addObject(GameObject obj) {
 		objects.Add(obj);
 	}

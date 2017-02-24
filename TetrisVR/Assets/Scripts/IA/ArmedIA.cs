@@ -30,12 +30,6 @@ public class ArmedIA : IA {
 
 	private ParticleSystem particles;
 
-    protected GameObject CurrentProjectile
-    {
-        get;
-        private set;
-    }
-
     bool meshFilterAdded = false;
 
     bool addMeshFilter()
@@ -48,7 +42,6 @@ public class ArmedIA : IA {
         {
             if (meshFilters[i].mesh == null)
             {
-                print("test");
                 return false;
             }
             combine[i].mesh = meshFilters[i].mesh;
@@ -65,28 +58,33 @@ public class ArmedIA : IA {
     private bool facingTarget() {
         Vector3 vectorToTarget = Target.transform.position - this.transform.position;
         vectorToTarget.y = 0;
-        return Vector3.Angle(transform.forward, vectorToTarget) < 10;
+        return Vector3.Angle(transform.forward, vectorToTarget) < 25;
     }
 
     private void fire() {
         if (facingTarget()) {
             var proj = projectilePool.getNext();
+            Vector3 force;
             CurrentProjectile = proj;
             if (weaponAlternance) {
+                particles.transform.position = WeaponPosition1.transform.position;
                 proj.transform.position = WeaponPosition1.transform.position;
+                force = (Target.transform.position - WeaponPosition1.transform.position).normalized;
             } else {
                 if (WeaponPosition2 != null) {
                     particles.transform.position = WeaponPosition2.transform.position;
                     proj.transform.position = WeaponPosition2.transform.position;
+                    force = (Target.transform.position - WeaponPosition2.transform.position).normalized;
                 } else {
                     particles.transform.position = WeaponPosition1.transform.position;
                     proj.transform.position = WeaponPosition1.transform.position;
+                    force = (Target.transform.position - WeaponPosition1.transform.position).normalized;
                 }
             }
             var rb = proj.GetComponent<Rigidbody>();
             if (rb != null) {
                 proj.SetActive(true);
-                rb.AddForce((Target.transform.position - this.transform.position).normalized * 500.0f);
+                rb.AddForce(force * 500.0f);
             }
             particles.Play();
             weaponAlternance = !weaponAlternance;
