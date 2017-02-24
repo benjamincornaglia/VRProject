@@ -153,8 +153,9 @@ public class Destruction : MonoBehaviour {
             {
                 //float fExplosionRadius = collision.relativeVelocity.magnitude * 1000f;
                 float fExplosionRadius = fDiff;
-				m_pExploder.ExplosionRadius = Random.Range(5,8);
+				m_pExploder.ExplosionRadius = 5f;
                 m_pExploder.Explode();
+				Debug.Log ("Swipe");
                 if (GetComponent<AudioSource>() != null)
                 {
                     GetComponent<AudioSource>().pitch = Random.Range(0f, 1.5f);
