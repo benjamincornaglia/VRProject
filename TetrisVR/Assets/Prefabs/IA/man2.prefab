@@ -40,9 +40,10 @@ GameObject:
   - component: {fileID: 65833316974626580}
   - component: {fileID: 54521377056481708}
   - component: {fileID: 114149060152149188}
+  - component: {fileID: 114791247996766274}
   m_Layer: 0
   m_Name: man2
-  m_TagString: Untagged
+  m_TagString: Comestible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +154,33 @@ MonoBehaviour:
   Solidity: 5.2
   Target: {fileID: 0}
   FleeDistance: 200
+--- !u!114 &114791247996766274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457462988715878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0c54c083335444a993e4ce9b142dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useNormal: 0
+  glowMode: 2
+  flashing: 0
+  flashSpeed: 1
+  noOcclusion: 0
+  scaleGlow: 1
+  glowIntensity: 0.5
+  glowOpacity: 2
+  glowColor: {r: 0.86764705, g: 0.5205882, b: 0, a: 1}
+  labelToDisplay: 
+  labelMode: 0
+  labelColor: {r: 1, g: 1, b: 1, a: 1}
+  outlined: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  textFont: {fileID: 0}
+  fontSize: 12
 --- !u!195 &195832054891670678
 NavMeshAgent:
   m_ObjectHideFlags: 1

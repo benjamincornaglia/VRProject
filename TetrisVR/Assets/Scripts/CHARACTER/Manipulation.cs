@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.AI;
 
 public class Manipulation : MonoBehaviour {
 
@@ -112,12 +113,11 @@ public class Manipulation : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, fwd, out hit, 100))
         {
-			if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.GetComponent<ArmedIA>() != null ||hit.collider.gameObject.tag == "PicaVoxelVolume") && m_pObject == null)
+			if ((hit.collider.gameObject.tag == "Piece" || hit.collider.gameObject.tag == "Comestible" || hit.collider.gameObject.tag == "PicaVoxelVolume") && m_pObject == null)
             {
                 m_pObject = hit.collider.gameObject;
                 if(m_pObject.GetComponent<shaderGlow>() != null)              
                     m_pObject.GetComponent<shaderGlow>().lightOn();
-                
             }
 
             if (m_pObject != null && hit.collider.gameObject != m_pObject && !m_bHasObject)
@@ -145,7 +145,7 @@ public class Manipulation : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, m_pObject.transform.position) > m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward * 5f + transform.up * -5, Time.deltaTime * m_fVacuumSpeed);
+				m_pObject.transform.position = Vector3.Lerp(m_pObject.transform.position, transform.position + transform.forward * 8f + transform.up * -8, Time.deltaTime * m_fVacuumSpeed);
 				m_pObject.transform.rotation = Quaternion.Lerp(m_pObject.transform.rotation, transform.rotation, Time.deltaTime * 2f);
 
                 if (device != null)
@@ -153,7 +153,7 @@ public class Manipulation : MonoBehaviour {
             }
             else if (Vector3.Distance(transform.position, m_pObject.transform.position) <= m_fVacuumStopDistance)
             {
-				m_pObject.transform.position = transform.position + transform.forward*5f + transform.up * -5;
+				m_pObject.transform.position = transform.position + transform.forward*8f + transform.up * -8;
 				m_pObject.transform.rotation = transform.rotation;
 
                 if (device != null)
@@ -217,6 +217,10 @@ public class Manipulation : MonoBehaviour {
 					m_pObject.GetComponent<Destruction>().m_bCanScore = true;
                 }
 				m_pMouth.GetComponent<Eat> ().m_pUsedCtrl = this.gameObject;
+
+				if (m_pObject.GetComponent<IA> () != null) {
+					m_pObject.GetComponent<IA> ().alive = false;
+				}
 			} 
             if (device.GetPressUp(triggerButton))
             {

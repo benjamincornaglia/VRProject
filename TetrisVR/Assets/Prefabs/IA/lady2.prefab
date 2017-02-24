@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 65025043022832466}
   - component: {fileID: 54329208531937292}
   - component: {fileID: 114679141383358712}
+  - component: {fileID: 114080622959827734}
   m_Layer: 0
   m_Name: lady2
-  m_TagString: Untagged
+  m_TagString: Comestible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +140,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.440063, y: 11.240002, z: 6.528452}
   m_Center: {x: 0.04087925, y: 5.651207, z: -0.030837059}
+--- !u!114 &114080622959827734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011540545307880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0c54c083335444a993e4ce9b142dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useNormal: 0
+  glowMode: 2
+  flashing: 0
+  flashSpeed: 1
+  noOcclusion: 0
+  scaleGlow: 1
+  glowIntensity: 0.5
+  glowOpacity: 2
+  glowColor: {r: 0.86764705, g: 0.5205882, b: 0, a: 1}
+  labelToDisplay: 
+  labelMode: 0
+  labelColor: {r: 1, g: 1, b: 1, a: 1}
+  outlined: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  textFont: {fileID: 0}
+  fontSize: 12
 --- !u!114 &114679141383358712
 MonoBehaviour:
   m_ObjectHideFlags: 1
