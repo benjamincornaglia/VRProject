@@ -33,7 +33,7 @@ public class HealthManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        HealthInput(-Time.deltaTime);
+        //HealthInput(-Time.deltaTime);
 	}
 
     public void HealthInput(float _fAmount)
@@ -54,7 +54,7 @@ public class HealthManager : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "Projectile") {
-			m_fLife -= 1;
+			HealthInput (-10);
 		}
 	}
 }

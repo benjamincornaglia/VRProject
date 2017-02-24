@@ -65,7 +65,7 @@ public class MillitarySpawnManager : MonoBehaviour {
 	
 	bool spawnHelico() {
         Vector3 spawnPosition =
-			Target.transform.position - (camera.transform.forward * 500) + new Vector3(0, 400, 0);
+			Target.transform.position - (camera.transform.forward * 50) + new Vector3(0, 400, 0);
 
 		return spawnObject(spawnPosition, helicoPool);
 	}
@@ -134,7 +134,7 @@ public class MillitarySpawnManager : MonoBehaviour {
 			throw new UnityException("IASpawnManager : Helico prefab has to be assigned.");
 		}
 
-		helicoPool = new ObjectPool(PrefabHelico, ObjectPoolSize, Target);
+		helicoPool = new ObjectPool(PrefabHelico, 2, Target);
 
 		spawnTimer = SpawnInterval;
 	}

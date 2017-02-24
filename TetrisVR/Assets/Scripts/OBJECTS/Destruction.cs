@@ -179,7 +179,7 @@ public class Destruction : MonoBehaviour {
                 //Debug.Log ("Explosion Radius = " + Mathf.Clamp(Mathf.Round(fExplosionRadius), 0, m_fMaxExplosionRadius));
             } 
         }
-        else if(this.gameObject.tag == "Piece" && collision.gameObject.tag == "PicaVoxelVolume")
+		else if((this.gameObject.tag == "Piece" || this.gameObject.tag == "Comestible" || gameObject.tag == "Projectile") && collision.gameObject.tag == "PicaVoxelVolume")
         {
             if (fDiff > m_fDestructionThreshold && m_bCanScore)
             {

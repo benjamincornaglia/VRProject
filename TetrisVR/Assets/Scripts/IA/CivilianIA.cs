@@ -62,7 +62,6 @@ public class CivilianIA : IA {
 		if (pathIndex == -1) {
 			pathIndex = nearestPointIndex();
 			agent.destination = path[pathIndex];
-			print ("setting path " + agent.hasPath +"-" + agent.stoppingDistance);
 		}
 
 		if (agent.hasPath && !agent.pathPending) {

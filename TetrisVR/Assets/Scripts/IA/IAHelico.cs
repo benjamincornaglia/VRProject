@@ -55,11 +55,11 @@ public class IAHelico : ArmedIA {
 		lastDistance = distance;
 
 		if (transform.position.y < Target.transform.position.y + 150.0f) {
-			rb.AddForce(-Physics.gravity * 5.5f * Time.deltaTime);
+			rb.AddForce(-Physics.gravity * 15.5f * Time.deltaTime);
 		}
 
 		if (rb.velocity.y < -10) {
-			rb.AddForce (-Physics.gravity * 5.0f * Time.deltaTime);
+			rb.AddForce (-Physics.gravity * 15.0f * Time.deltaTime);
 		}
 	}
 }

@@ -10,6 +10,7 @@ TagManager:
   - Destructor
   - Floor
   - Comestible
+  - Projectile
   layers:
   - Default
   - TransparentFX
