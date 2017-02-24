@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DesactivateObjectsTooFar : MonoBehaviour 
 {
-	MeshRenderer _myMesh;
+	/*MeshRenderer _myMesh;
 	PicaVoxel.Chunk _myChunk;
 	MeshCollider _myMeshCollider;
 
@@ -27,7 +27,7 @@ public class DesactivateObjectsTooFar : MonoBehaviour
 
 		if (_myChunk != null) 
 		{
-			_myChunk.enabled = true;
+			//_myChunk.enabled = true;
 		}
 
 		if (_myMeshCollider != null) 
@@ -47,12 +47,12 @@ public class DesactivateObjectsTooFar : MonoBehaviour
 
 		if (_myChunk != null) 
 		{
-			_myChunk.enabled = false;
+			//_myChunk.enabled = false;
 		}
 
 		if (_myMeshCollider != null) 
 		{
 			//_myMeshCollider.enabled = false;
 		}
-	}
+	}*/
 }
