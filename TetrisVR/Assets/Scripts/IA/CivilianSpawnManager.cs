@@ -1,31 +1,36 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PicaVoxel;
 
-public class IASpawnManager : MonoBehaviour {
+public class CivilianSpawnManager : MonoBehaviour {
 
 	public GameObject Target;
 
 	[Range(5, 60)]
 	public int ObjectPoolSize = 5;
 
-	public GameObject PrefabHelico;
-	private ObjectPool helicoPool;
+	public GameObject PrefabMan1;
+	private ObjectPool man1Pool;
 
-	public GameObject PrefabMillitary;
-	private ObjectPool millitaryPool;
+	public GameObject PrefabMan2;
+	private ObjectPool man2Pool;
 
-	public GameObject PrefabTank;
-	private ObjectPool tankPool;
+	public GameObject PrefabLady1;
+	private ObjectPool lady1Pool;
+
+	public GameObject PrefabLady2;
+	private ObjectPool lady2Pool;
 
 	private List<GameObject> spawners = new List<GameObject>();
+	private List<Vector3> path = new List<Vector3>();
 
 	private Camera camera = null;
 
 	public int SpawnInterval = 5;
 
 	private float spawnTimer;
+
+	private ObjectPool[] pools = new ObjectPool[4];
 
 	private bool isInTheFieldOfView(Vector3 position) {
 		Vector3 viewSpacePosition = camera.WorldToViewportPoint(position);
@@ -55,23 +60,12 @@ public class IASpawnManager : MonoBehaviour {
 			return false;
 		}
 
-		Volume volume = obj.GetComponent<Volume>();
-
-		if (volume != null) {
-			volume.Rebuild();
-		}
+		spawnPosition.y = 0;
 
 		obj.transform.position = spawnPosition;
 		obj.SetActive(true);
 		obj.GetComponent<IA>().alive = true;
 		return true;
-	}
-	
-	bool spawnHelico() {
-        Vector3 spawnPosition =
-			Target.transform.position - (camera.transform.forward * 500) + new Vector3(0, 200, 0);
-
-		return spawnObject(spawnPosition, helicoPool);
 	}
 
 	GameObject getRandomSpawnerOutsideFOV(int maxTry) {
@@ -93,55 +87,52 @@ public class IASpawnManager : MonoBehaviour {
 		return spawnObject(spawner.transform.position, pool);
 	}
 
-	bool spawnTank() {
-        return spawnNavMeshGuided(tankPool);
-	}
-
-	bool spawnMilitary() {
-		return spawnNavMeshGuided(millitaryPool);
-	}
-
 	void spawnRandom() {
-		int type = Random.Range(0, 10);
-        print(type);
-		if (type == 0) {
-			spawnHelico();
-		} else if (type < 3) {
-			spawnTank();
-		} else {
-			spawnMilitary();
-		}
+		int type = Random.Range(0, pools.Length);
+		spawnNavMeshGuided(pools[type]);
 	}
 
 	// Use this for initialization
 	void Start () {
 		foreach(Transform child in this.transform) {
 			spawners.Add(child.gameObject);
+			path.Add(child.position);
 		}
 
 		if (spawners.Count == 0) {
 			throw new UnityException("IASpawnManager : SpawnManagerObject must contain at least one spwaner.");
 		}
 
-		if (PrefabTank == null) {
-			throw new UnityException("IASpawnManager : Tank prefab has to be assigned.");
+		if (PrefabMan1 == null) {
+			throw new UnityException("IASpawnManager :  Man1 prefab has to be assigned.");
 		}
 
-		tankPool = new ObjectPool(PrefabTank, ObjectPoolSize, Target);
+		man1Pool = new ObjectPool(PrefabMan1, ObjectPoolSize, Target, path);
 
-		if (PrefabMillitary == null) {
-			throw new UnityException("IASpawnManager : Millitary prefab has to be assigned.");
+		if (PrefabMan2 == null) {
+			throw new UnityException("IASpawnManager : Man2 prefab has to be assigned.");
 		}
 
-		millitaryPool = new ObjectPool(PrefabMillitary, ObjectPoolSize, Target);
+		man2Pool = new ObjectPool(PrefabMan2, ObjectPoolSize, Target, path);
 
-		if (PrefabHelico == null) {
-			throw new UnityException("IASpawnManager : Helico prefab has to be assigned.");
+		if (PrefabLady1 == null) {
+			throw new UnityException("IASpawnManager : Lady1 prefab has to be assigned.");
 		}
 
-		helicoPool = new ObjectPool(PrefabHelico, ObjectPoolSize, Target);
+		lady1Pool = new ObjectPool(PrefabLady1, ObjectPoolSize, Target, path);
+
+		if (PrefabLady2 == null) {
+			throw new UnityException("IASpawnManager : Lady2 prefab has to be assigned.");
+		}
+
+		lady2Pool = new ObjectPool(PrefabLady2, ObjectPoolSize, Target, path);
 
 		spawnTimer = SpawnInterval;
+
+		pools[0] = man1Pool;
+		pools[1] = man2Pool;
+		pools[2] = lady1Pool;
+		pools[3] = lady2Pool;
 	}
 
 	// Update is called once per frame
