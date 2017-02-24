@@ -166,11 +166,11 @@ public class Destruction : MonoBehaviour {
 
                     }
                 }
-                RandomRubbleSpawn(collision.contacts[0].point);
+                //RandomRubbleSpawn(collision.contacts[0].point);
                 if(_collisioned == false)
                 {
                     _collisioned = true;
-                    _themanager.swipeHappen(collision.contacts[0].point);
+                    //_themanager.swipeHappen(collision.contacts[0].point);
                     transform.GetChild(1).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
                     transform.GetChild(1).GetComponent<AudioSource>().Play();
                 }
@@ -199,18 +199,18 @@ public class Destruction : MonoBehaviour {
 
                     }
                 }
-                RandomRubbleSpawn(collision.contacts[0].point);
+                //RandomRubbleSpawn(collision.contacts[0].point);
 				if(!m_bGrabbed && !_collisioned)
                 {
                     _collisioned = true;
-                    _themanager.throwhappen(collision.contacts[0].point);
+                    //_themanager.throwhappen(collision.contacts[0].point);
                     transform.GetChild(0).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
                     transform.GetChild(0).GetComponent<AudioSource>().Play();
                 }
                 else if(m_bGrabbed && !_collisioned)
                 {
                     _collisioned = true;
-                    _themanager.swipeHappen(collision.contacts[0].point);
+                   // _themanager.swipeHappen(collision.contacts[0].point);
                     transform.GetChild(1).GetComponent<AudioSource>().pitch = Random.Range(1f, 1.1f);
                     transform.GetChild(1).GetComponent<AudioSource>().Play();
                 }

@@ -5,7 +5,5 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/MemoryRemix/Scenes/MainScene.unity
   - enabled: 1
-    path: Assets/Scenes/TetrisLD.unity
+    path: Assets/Scenes/Tetris_SoutenanceV2.unity
