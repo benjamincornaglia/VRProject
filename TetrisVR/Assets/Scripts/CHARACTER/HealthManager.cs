@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour {
 
@@ -49,7 +50,7 @@ public class HealthManager : MonoBehaviour {
 
     void Die()
     {
-        Application.LoadLevel(Application.loadedLevel);
+		SceneManager.LoadScene ("GameOverScene");
     }
 
 	void OnCollisionEnter(Collision collision) {

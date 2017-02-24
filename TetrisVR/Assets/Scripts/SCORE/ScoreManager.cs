@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
-	public int _score,_bonuscombo,_swipecounter;
+	public static int _score;
+	public int _bonuscombo,_swipecounter;
 	public float _bonustime;
     public GameObject m_pTxtPrefab;
     public float m_fSpawnDistance = 50f;

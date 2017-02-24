@@ -39,6 +39,9 @@ GameObject:
   - component: {fileID: 65636400102005028}
   - component: {fileID: 54016772745497906}
   - component: {fileID: 114096921696652936}
+  - component: {fileID: 114294796422053950}
+  - component: {fileID: 82062947139231640}
+  - component: {fileID: 114490929034359026}
   m_Layer: 0
   m_Name: tank
   m_TagString: Piece
@@ -169,6 +172,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 37.3, y: 27.3, z: 65.47}
   m_Center: {x: 0, y: 13.19, z: 1.77}
+--- !u!82 &82062947139231640
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490547377991186}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114096921696652936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +279,23 @@ MonoBehaviour:
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
   textFont: {fileID: 0}
   fontSize: 12
+--- !u!114 &114294796422053950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490547377991186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88542c465f9e96b4ea82c353b78789f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: PicaVoxelVolume
+  ExplosionRadius: 10
+  ParticleVelocity: 2
+  ExplodeTarget: 0
+  ValueFilterOperation: 3
+  ValueFilter: 0
 --- !u!114 &114386231760229994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +318,29 @@ MonoBehaviour:
   Particles: {fileID: 198792472786452188, guid: 679b3dec771d23147a9d5b3b956eb635,
     type: 2}
   UpdateDistance: 5
+--- !u!114 &114490929034359026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490547377991186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760f73c756abba94c84d63401b380451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pExploder: {fileID: 114294796422053950}
+  m_fMaxExplosionRadius: 10.49
+  m_fDestructionThreshold: 0
+  m_pClip: {fileID: 0}
+  m_pRubble: {fileID: 1958799573274718, guid: 3ab79c341bed64942b7f1306c348a8db, type: 2}
+  m_fSpawnTimer: 2
+  m_iRubbleStacks: 3
+  m_bCanSpawnRubbles: 0
+  m_bGrabbed: 0
+  _themanager: {fileID: 0}
+  m_bCanScore: 0
+  m_ePlayMode: 0
 --- !u!195 &195679282422869206
 NavMeshAgent:
   m_ObjectHideFlags: 1

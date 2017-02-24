@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Tetris_SoutenanceV2.unity
   - enabled: 1
     path: Assets/Scenes/Tetris_Soutenance_FINALE.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
