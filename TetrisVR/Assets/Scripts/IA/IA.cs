@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IA : MonoBehaviour {
 
-	[Range(0.01f, 20.0f)]
+	[Range(0.01f, 500.0f)]
 	public float Solidity = 0.4f;
 
 	public GameObject CurrentProjectile
@@ -20,6 +20,7 @@ public class IA : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject != CurrentProjectile && collision.impulse.magnitude > Solidity) {
+			print(collision.impulse.magnitude);
             alive = false;
         }
 	}
